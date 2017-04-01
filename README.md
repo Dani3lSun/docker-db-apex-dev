@@ -49,7 +49,7 @@ TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
 APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login
 APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
 APEX_ADDITIONAL_LANG_NLS= # Additional Language of APEX (NLS Setting), blank to only install English (e.g GERMAN_GERMANY, SPANISH_SPAIN, FRENCH_FRANCE, ...)
-TIME_ZONE=Europe/Berlin # Timezone of you favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
+TIME_ZONE=UTC # Timezone of you favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
 ```
 
 4. **Build the Docker Image**

@@ -25,10 +25,12 @@ git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
 ```
 
 2. **Download missing Software Components**
+
 Thus you have to agree the License Agreement of Oracle for parts of this Docker Image you have to download the Install Files by your own.
 You can take the direct Downlink Links from [download_urls.txt](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/files/download_urls.txt) in [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
 
 3. **Customize some settings to reflect your needs (optional)**
+
 You can change some Environment Variables directly in the dockerfile:
 
 ```bash
@@ -55,7 +57,7 @@ TIME_ZONE=Europe/Berlin # Timezone of you favorite Location (Europe/Berlin, UTC,
 ```bash
 cd /path/to/docker-db-apex-dev
 docker build -t <your-docker-image-name> .
-# or
+# e.g
 docker build -t docker-db-apex-dev-image .
 ```
 

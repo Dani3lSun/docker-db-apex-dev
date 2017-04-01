@@ -36,6 +36,8 @@ chmod +x /.oracle_env
 # set environment
 . /.oracle_env
 cat /.oracle_env >> /home/oracle/.bash_profile
+cat /.oracle_env >> /home/oracle/.bashrc # .bash_profile not executed by docker
+cat /.oracle_env >> /root/.bash_profile
 cat /.oracle_env >> /root/.bashrc # .bash_profile not executed by docker
 
 # create directories and separate /u01/app/oracle/product to mount ${ORACLE_BASE} as volume

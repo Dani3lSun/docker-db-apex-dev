@@ -110,7 +110,7 @@ apex_create_tablespace
 apex_install
 apex_change_admin_pwd
 apex_rest_config
-if ! [ ${APEX_ADDITIONAL_LANG} == "" ]; then
+if [ ! -z "${APEX_ADDITIONAL_LANG}" ]; then
     apex_install_lang
 fi
 cd /

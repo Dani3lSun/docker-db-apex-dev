@@ -18,7 +18,7 @@ ENV INSTALL_APEX=true \
     APEX_PASS=OrclAPEX12c! \
     APEX_ADDITIONAL_LANG= \
     APEX_ADDITIONAL_LANG_NLS= \
-    TIME_ZONE=Europe/Berlin
+    TIME_ZONE=UTC
 
 # copy all scripts
 ADD scripts /scripts/

@@ -128,6 +128,8 @@ root | oracle
 
 If you want to use SSH without a Password but rather with PubKey Authentication you have the place a **authorized_keys** file in the [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
 
+**Place all downloaded files under the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
+
 ## Credits
 This Dockerfile is based on the following work:
 

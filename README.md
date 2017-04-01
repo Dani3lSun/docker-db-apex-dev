@@ -20,9 +20,9 @@ Complete the following steps to create a new container:
 
 1. **Clone or Download the Github Repository to you local Machine**
 
-		```
-		git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
-		```
+```bash
+git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
+```
 
 2. **Download missing Software Components**
 Thus you have to agree the License Agreement of Oracle for parts of this Docker Image you have to download the Install Files by your own.
@@ -31,51 +31,51 @@ You can take the direct Downlink Links from [download_urls.txt](https://github.c
 3. **Customize some settings to reflect your needs (optional)**
 You can change some Environment Variables directly in the dockerfile:
 
- 		```
-		INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
-		INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
-		DBCA_TOTAL_MEMORY=2048 # Memeory Size of Database
-		ORACLE_SID=db12c # SID of Oracle Database
-		SERVICE_NAME=db12c.docker # SERVICE_NAME of Oracle Database
-		ORACLE_BASE=/u01/app/oracle # Path to ORACLE_BASE Directory
-		ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory
-		ORACLE_INVENTORY=/u01/app/oraInventory # Path to ORACLE_INVENTORY Directory
-		PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...) and SSH
-		ORDS_HOME=/u01/ords # Path to ORDS_HOME Directory
-		JAVA_HOME=/opt/java # Path to JAVA_HOME Directory
-		TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
-		APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login
-		APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
-		APEX_ADDITIONAL_LANG_NLS= # Additional Language of APEX (NLS Setting), blank to only install English (e.g GERMAN_GERMANY, SPANISH_SPAIN, FRENCH_FRANCE, ...)
-		TIME_ZONE=Europe/Berlin # Timezone of you favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
-		```
+```bash
+INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
+INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
+DBCA_TOTAL_MEMORY=2048 # Memeory Size of Database
+ORACLE_SID=db12c # SID of Oracle Database
+SERVICE_NAME=db12c.docker # SERVICE_NAME of Oracle Database
+ORACLE_BASE=/u01/app/oracle # Path to ORACLE_BASE Directory
+ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory
+ORACLE_INVENTORY=/u01/app/oraInventory # Path to ORACLE_INVENTORY Directory
+PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...) and SSH
+ORDS_HOME=/u01/ords # Path to ORDS_HOME Directory
+JAVA_HOME=/opt/java # Path to JAVA_HOME Directory
+TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
+APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login
+APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
+APEX_ADDITIONAL_LANG_NLS= # Additional Language of APEX (NLS Setting), blank to only install English (e.g GERMAN_GERMANY, SPANISH_SPAIN, FRENCH_FRANCE, ...)
+TIME_ZONE=Europe/Berlin # Timezone of you favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
+```
 
 4. **Build the Docker Image**
 
-		```
-		cd /path/to/docker-db-apex-dev
-		docker build -t <your-docker-image-name> .
-		or
-		docker build -t docker-db-apex-dev-image .
-		```
+```bash
+cd /path/to/docker-db-apex-dev
+docker build -t <your-docker-image-name> .
+# or
+docker build -t docker-db-apex-dev-image .
+```
 
 5. **Run the Docker Container**
 
-		```
-		docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 <your-docker-image-name>
-		e.g
-		docker run -d --name docker-db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 docker-db-apex-dev-image
-		```
+```bash
+docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 <your-docker-image-name>
+# e.g
+docker run -d --name docker-db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 docker-db-apex-dev-image
+```
 
 6. **Start/Stop of Docker Container**
 
-		```
-		docker start <your-docker-container-name>
-		docker stop <your-docker-container-name>
-		e.g
-		docker start docker-db-apex-dev-container
-		docker stop docker-db-apex-dev-container
-		```
+```bash
+docker start <your-docker-container-name>
+docker stop <your-docker-container-name>
+# e.g
+docker start docker-db-apex-dev-container
+docker stop docker-db-apex-dev-container
+```
 
 ## Access To Services
 

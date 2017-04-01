@@ -16,8 +16,8 @@ ENV INSTALL_APEX=true \
     JAVA_HOME=/opt/java \
     TOMCAT_HOME=/opt/tomcat \
     APEX_PASS=OrclAPEX12c! \
-    APEX_ADDITIONAL_LANG=de \
-    APEX_ADDITIONAL_LANG_NLS=GERMAN_GERMANY \
+    APEX_ADDITIONAL_LANG= \
+    APEX_ADDITIONAL_LANG_NLS= \
     TIME_ZONE=Europe/Berlin
 
 # copy all scripts

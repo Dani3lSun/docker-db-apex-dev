@@ -21,7 +21,7 @@ Complete the following steps to create a new container:
 1. **Clone or Download the Github Repository to you local Machine**
 
 		```
-		https://github.com/Dani3lSun/docker-db-apex-dev.git
+		git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
 		```
 
 2. **Download missing Software Component**
@@ -31,7 +31,7 @@ You can take the direct Downlink Links from download_urls.txt in files directory
 3. **Customize some settings to reflect your needs (optional)**
 You can change some Environment Variables directly in the dockerfile:
 
- ```
+ 		```
 		INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
 		INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
 		DBCA_TOTAL_MEMORY=2048 # Memeory Size of Database

@@ -33,7 +33,7 @@ You can take the direct Downlink Links from [download_urls.txt](https://github.c
 
 3. **Customize some settings to reflect your needs (optional)**
 
-You can change some Environment Variables directly in the dockerfile:
+You can change some Environment Variables directly in the [Dockerfile](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/Dockerfile):
 
 ```bash
 INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not

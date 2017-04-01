@@ -58,7 +58,7 @@ TIME_ZONE=UTC # Timezone of you favorite Location (Europe/Berlin, UTC, US/Easter
 cd /path/to/docker-db-apex-dev
 docker build -t <your-docker-image-name> .
 # e.g
-docker build -t docker-db-apex-dev-image .
+docker build -t db-apex-dev-image .
 ```
 
 5. **Run the Docker Container**
@@ -66,7 +66,7 @@ docker build -t docker-db-apex-dev-image .
 ```bash
 docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 <your-docker-image-name>
 # e.g
-docker run -d --name docker-db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 docker-db-apex-dev-image
+docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 db-apex-dev-image
 ```
 
 6. **Start/Stop of Docker Container**
@@ -75,15 +75,15 @@ docker run -d --name docker-db-apex-dev-container -p 2222:22 -p 8080:8080 -p 152
 docker start <your-docker-container-name>
 docker stop <your-docker-container-name>
 # e.g
-docker start docker-db-apex-dev-container
-docker stop docker-db-apex-dev-container
+docker start db-apex-dev-container
+docker stop db-apex-dev-container
 ```
 
 ## Access To Services
 
-For this Docker Run Example and the Default Environment Variables (Step 3):
+For this Docker Run Example and the **Default Environment Variables (Step 3)**:
 
-**docker run -d --name docker-db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 docker-db-apex-dev-image**
+**docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 db-apex-dev-image**
 
 ### Oracle APEX
 

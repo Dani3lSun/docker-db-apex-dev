@@ -18,7 +18,7 @@ This Docker Image contains the following:
 
 Complete the following steps to create a new container:
 
-1. **Clone or Download the Github Repository to you local Machine**
+1. **Clone or Download the Github Repository to your local Machine**
 
 ```bash
 git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
@@ -26,7 +26,7 @@ git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
 
 2. **Download missing Software Components**
 
-Thus you have to agree the License Agreement of Oracle for parts of this Docker Image you have to download the Install Files by your own.
+Thus you have to agree to the License Agreement of Oracle for parts of this Docker Image, you have to download the Install Files by your own.
 You can take the direct Downlink Links from [download_urls.txt](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/files/download_urls.txt) in [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
 
 **Place all downloaded files under the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
@@ -40,7 +40,7 @@ INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or
 INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
 DBCA_TOTAL_MEMORY=2048 # Memeory Size of Database
 ORACLE_SID=db12c # SID of Oracle Database
-SERVICE_NAME=db12c.docker # SERVICE_NAME of Oracle Database
+SERVICE_NAME=db12c # SERVICE_NAME of Oracle Database
 ORACLE_BASE=/u01/app/oracle # Path to ORACLE_BASE Directory
 ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory
 ORACLE_INVENTORY=/u01/app/oraInventory # Path to ORACLE_INVENTORY Directory
@@ -118,7 +118,7 @@ apex_listener | oracle
 apex\_rest\_public\_user | oracle
 apex\_public\_user | oracle
 
-Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/db12c.docker```
+Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/db12c```
 
 ### SSH
 

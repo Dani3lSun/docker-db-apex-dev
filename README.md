@@ -106,7 +106,7 @@ Property | Value
 Hostname | localhost
 Port | 1521
 SID | db12c
-Service | db12c.docker
+Service | db12c
 
 The configured user with their credentials are:
 

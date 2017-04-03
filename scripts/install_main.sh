@@ -59,7 +59,7 @@ fi
 #
 echo "--------------------------------------------------"
 echo "Cleanup..........................................."
-yum clean
+yum clean all
 rm -r -f /tmp/*
 rm -r -f /files/*
 rm -r -f /var/tmp/*

@@ -44,14 +44,14 @@ SERVICE_NAME=db12c # SERVICE_NAME of Oracle Database
 ORACLE_BASE=/u01/app/oracle # Path to ORACLE_BASE Directory
 ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory
 ORACLE_INVENTORY=/u01/app/oraInventory # Path to ORACLE_INVENTORY Directory
-PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...) and SSH
+PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...), Tomcat Admin and SSH
 ORDS_HOME=/u01/ords # Path to ORDS_HOME Directory
 JAVA_HOME=/opt/java # Path to JAVA_HOME Directory
 TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
 APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login
 APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
 APEX_ADDITIONAL_LANG_NLS= # Additional Language of APEX (NLS Setting), blank to only install English (e.g GERMAN_GERMANY, SPANISH_SPAIN, FRENCH_FRANCE, ...)
-TIME_ZONE=UTC # Timezone of you favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
+TIME_ZONE=UTC # Timezone of your favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
 ```
 
 4. **Build the Docker Image**

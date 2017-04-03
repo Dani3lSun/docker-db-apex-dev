@@ -24,21 +24,17 @@ echo "--------------------------------------------------"
 echo "Image Setup......................................."
 ./scripts/image_setup.sh
 #
-#
 echo "--------------------------------------------------"
 echo "Installing SSH...................................."
 ./scripts/install_ssh.sh
-#
 #
 echo "--------------------------------------------------"
 echo "Installing JAVA..................................."
 ./scripts/install_java.sh
 #
-#
 echo "--------------------------------------------------"
 echo "Installing ORACLE DB12201 EE......................"
 ./scripts/install_oracle12ee.sh
-#
 #
 if [ ${INSTALL_SQLCL} == "true" ]; then
     echo "--------------------------------------------------"
@@ -46,28 +42,24 @@ if [ ${INSTALL_SQLCL} == "true" ]; then
     ./scripts/install_sqlcl.sh
 fi
 #
-#
 if [ ${INSTALL_APEX} == "true" ]; then
-    #
     #
     echo "--------------------------------------------------"
     echo "Installing ORACLE APEX............................"
     ./scripts/install_apex.sh
     #
-    #
     echo "--------------------------------------------------"
     echo "Installing TOMCAT................................."
     ./scripts/install_tomcat.sh
-    #
     #
     echo "--------------------------------------------------"
     echo "Installing ORACLE ORDS............................"
     ./scripts/install_ords.sh
 fi
 #
-#
 echo "--------------------------------------------------"
 echo "Cleanup..........................................."
+yum clean
 rm -r -f /tmp/*
 rm -r -f /files/*
 rm -r -f /var/tmp/*

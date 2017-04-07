@@ -2,6 +2,7 @@
 
 # ignore secure linux
 setenforce Permissive
+sed -i -E 's:SELINUX=enforcing:SELINUX=permissive:g' /etc/selinux/config
 
 # create oracle groups
 groupadd --gid 54321 oinstall
@@ -10,6 +11,9 @@ groupadd --gid 54323 oper
 
 # create oracle user
 useradd --create-home --gid oinstall --groups oinstall,dba --uid 54321 oracle
+
+# set unix password
+echo 'oracle:'${PASS} | chpasswd
 
 # install required OS components
 yum install -y oracle-database-server-12cR2-preinstall.x86_64 \
@@ -24,7 +28,7 @@ echo "export JAVA_HOME=${JAVA_HOME}" > /.oracle_env
 echo "export ORACLE_HOME=${ORACLE_HOME}" >> /.oracle_env
 echo "export ORACLE_BASE=${ORACLE_BASE}" >> /.oracle_env
 echo "export ORACLE_SID=${ORACLE_SID}" >> /.oracle_env
-echo "export PATH=/usr/sbin:\$PATH:/opt/sqlcl/bin" >> /.oracle_env
+echo "export PATH=/usr/sbin:\$PATH" >> /.oracle_env
 echo "export PATH=\$ORACLE_HOME/bin:\$PATH" >> /.oracle_env
 echo "export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib" >> /.oracle_env
 echo "export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib" >> /.oracle_env

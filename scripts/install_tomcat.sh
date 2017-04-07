@@ -5,7 +5,7 @@ groupadd tomcat
 useradd -M -s /bin/nologin -g tomcat -d ${TOMCAT_HOME} tomcat
 
 cd /files
-tar -xzf tomcat*.tar.gz -C ${TOMCAT_HOME} --strip-components=1
+tar -xzf apache-tomcat*.tar.gz -C ${TOMCAT_HOME} --strip-components=1
 sed -i -E 's:#PASSWORD#:'${PASS}':g' /files/tomcat-users.xml
 mv /files/tomcat-users.xml ${TOMCAT_HOME}/conf
 chown -R tomcat:tomcat ${TOMCAT_HOME}

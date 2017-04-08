@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# ignore secure linux
-setenforce Permissive
-sed -i -E 's:SELINUX=enforcing:SELINUX=permissive:g' /etc/selinux/config
-
 # create oracle groups
 groupadd --gid 54321 oinstall
 groupadd --gid 54322 dba

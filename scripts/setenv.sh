@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# ignore secure linux
-setenforce Permissive
+# disable SELinux
+setenforce disabled
 
 # Prevent owner issues on mounted folders
 chown -R oracle:dba ${ORACLE_BASE}

@@ -25,10 +25,6 @@ echo "Image Setup......................................."
 ./scripts/image_setup.sh
 #
 echo "--------------------------------------------------"
-echo "Installing SSH...................................."
-./scripts/install_ssh.sh
-#
-echo "--------------------------------------------------"
 echo "Installing JAVA..................................."
 ./scripts/install_java.sh
 #
@@ -56,6 +52,10 @@ if [ ${INSTALL_APEX} == "true" ]; then
     echo "Installing ORACLE ORDS............................"
     ./scripts/install_ords.sh
 fi
+#
+echo "--------------------------------------------------"
+echo "Installing SSH...................................."
+./scripts/install_ssh.sh
 #
 echo "--------------------------------------------------"
 echo "Cleanup..........................................."

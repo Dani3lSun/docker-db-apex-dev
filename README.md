@@ -29,7 +29,7 @@ git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
 Thus you have to agree to the License Agreement of Oracle for parts of this Docker Image, you have to download the Install Files by your own.
 You can take the direct Downlink Links from [download_urls.txt](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/files/download_urls.txt) in [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
 
-**Place all downloaded files under the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
+**Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
 
 3. **Customize some settings to reflect your needs (optional)**
 
@@ -127,6 +127,7 @@ To access the Docker Container via SSH: ```ssh root@localhost -p 2222```
 User | Password
 -------- | -----
 root | oracle
+oracle | oracle
 
 If you want to use SSH without a Password but rather with PubKey Authentication you have the place a **authorized_keys** file in the [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
 

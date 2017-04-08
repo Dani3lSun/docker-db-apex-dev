@@ -28,6 +28,7 @@ if [ -f /files/authorized_keys ]; then
     # set authorized_keys file oracle
     mkdir /home/oracle/.ssh/
     cp /files/authorized_keys /home/oracle/.ssh/
+    chown -R oracle:oinstall /home/oracle/.ssh/
     restorecon -r -vv  /home/oracle/.ssh
     chmod 600 /home/oracle/.ssh/authorized_keys
 fi

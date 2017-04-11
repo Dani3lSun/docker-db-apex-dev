@@ -66,10 +66,12 @@ docker build -t db-apex-dev-image .
 5. **Run the Docker Container**
 
 ```bash
-docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 <your-docker-image-name>
+docker run -d --name <your-docker-container-name> -p <local-ssh-port>:22 -p <local-http-port>:8080 -p <local-db-listener-port>:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g <your-docker-image-name>
 # e.g
-docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 db-apex-dev-image
+docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g db-apex-dev-image
 ```
+
+*Note: /dev/shm should be equal the size of allocated Memory to the Database. /dev/shm must also be mounted as tmpfs.*
 
 6. **Start/Stop of Docker Container**
 
@@ -85,7 +87,7 @@ docker stop db-apex-dev-container
 
 For this Docker Run Example and the **Default Environment Variables (Step 3)**:
 
-**docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 db-apex-dev-image**
+**docker run -d --name db-apex-dev-container -p 2222:22 -p 8080:8080 -p 1521:1521 -v /dev/shm --tmpfs /dev/shm:rw,nosuid,nodev,exec,size=2g db-apex-dev-image**
 
 ### Oracle APEX
 

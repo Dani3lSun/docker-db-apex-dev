@@ -8,7 +8,7 @@ This Docker Image contains the following:
 * Oracle Database 12.2.0.1 Enterprise Edition with non-CDB architecture
 * Oracle APEX 5.1.1
 * Oracle ORDS 3.0.9
-* Oracle SQLCL 4.2.0.17.096.0933
+* Oracle SQLCL 4.2.0.17.097.0719
 * Apache Tomcat 8.0.43
 * Java JDK 8u121
 

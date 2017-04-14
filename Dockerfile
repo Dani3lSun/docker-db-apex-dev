@@ -17,7 +17,6 @@ ENV INSTALL_APEX=true \
     TOMCAT_HOME=/opt/tomcat \
     APEX_PASS=OrclAPEX12c! \
     APEX_ADDITIONAL_LANG= \
-    APEX_ADDITIONAL_LANG_NLS= \
     TIME_ZONE=UTC
 
 # copy all scripts

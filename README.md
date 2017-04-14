@@ -48,7 +48,7 @@ PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...), T
 ORDS_HOME=/u01/ords # Path to ORDS_HOME Directory
 JAVA_HOME=/opt/java # Path to JAVA_HOME Directory
 TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
-APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login
+APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login (Caution: Oracle APEX Password Policy)
 APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
 TIME_ZONE=UTC # Timezone of your favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
 ```

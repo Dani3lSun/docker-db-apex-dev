@@ -11,7 +11,7 @@ This Docker Image contains the following:
 * Oracle SQLCL 4.2.0.17.097.0719
 * Apache Tomcat 8.0.44
 * Java JDK 8u131
-* Logger
+* Logger 3.1.1
 
 ## Installation
 
@@ -38,7 +38,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle SQLCL 4.2.0.17.097.0719](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-4.2.0.17.097.0719-no-jre.zip)
 * [Apache Tomcat 8.0.44](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz)
 * [Java JDK 8u131 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* [Logger](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
+* [OraOpenSource Logger](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**

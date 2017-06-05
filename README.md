@@ -9,8 +9,9 @@ This Docker Image contains the following:
 * Oracle APEX 5.1.1
 * Oracle ORDS 3.0.9
 * Oracle SQLCL 4.2.0.17.097.0719
-* Apache Tomcat 8.0.43
-* Java JDK 8u121
+* Apache Tomcat 8.0.44
+* Java JDK 8u131
+* Logger
 
 ## Installation
 
@@ -29,6 +30,17 @@ git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
 Thus you have to agree to the License Agreement of Oracle for parts of this Docker Image, you have to download the Install Files by your own.
 You can take the direct Download Links from [download_urls.txt](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/files/download_urls.txt) in [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) directory.
 
+**Direct Links:**
+
+* [Oracle Database 12.2.0.1 EE](http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
+* [Oracle APEX 5.1.1](http://download.oracle.com/otn/java/appexpress/apex_5.1.1.zip)
+* [Oracle ORDS 3.0.9](http://download.oracle.com/otn/java/ords/ords.3.0.9.348.07.16.zip)
+* [Oracle SQLCL 4.2.0.17.097.0719](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-4.2.0.17.097.0719-no-jre.zip)
+* [Apache Tomcat 8.0.44](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz)
+* [Java JDK 8u131 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Logger](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
+* [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
+
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
 
 3. **Customize some settings to reflect your needs (optional)**
@@ -38,6 +50,7 @@ You can change some Environment Variables directly in the [Dockerfile](https://g
 ```bash
 INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
 INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
+INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
 DBCA_TOTAL_MEMORY=2048 # Memory Size of Database
 ORACLE_SID=db12c # SID of Oracle Database
 SERVICE_NAME=db12c # SERVICE_NAME of Oracle Database
@@ -118,6 +131,7 @@ sys | oracle
 apex_listener | oracle
 apex\_rest\_public\_user | oracle
 apex\_public\_user | oracle
+logger\_user | oracle
 
 Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/db12c```
 

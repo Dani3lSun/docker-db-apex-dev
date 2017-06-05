@@ -5,6 +5,7 @@ MAINTAINER Daniel Hochleitner <dhochleitner@posteo.de>
 # environment variables
 ENV INSTALL_APEX=true \
     INSTALL_SQLCL=true \
+    INSTALL_LOGGER=true \
     DBCA_TOTAL_MEMORY=2048 \
     ORACLE_SID=db12c \
     SERVICE_NAME=db12c \

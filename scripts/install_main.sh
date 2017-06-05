@@ -4,6 +4,7 @@ echo "--------------------------------------------------"
 echo "Environment Vars.................................."
 echo "INSTALL_APEX: ${INSTALL_APEX}"
 echo "INSTALL_SQLCL: ${INSTALL_SQLCL}"
+echo "INSTALL_LOGGER: ${INSTALL_LOGGER}"
 echo "DBCA_TOTAL_MEMORY: ${DBCA_TOTAL_MEMORY}"
 echo "ORACLE_SID: ${ORACLE_SID}"
 echo "SERVICE_NAME: ${SERVICE_NAME}"
@@ -50,6 +51,13 @@ if [ ${INSTALL_APEX} == "true" ]; then
     echo "--------------------------------------------------"
     echo "Installing ORACLE ORDS............................"
     ./scripts/install_ords.sh
+fi
+#
+if [ ${INSTALL_LOGGER} == "true" ]; then
+    #
+    echo "--------------------------------------------------"
+    echo "Installing OraOpenSource Logger..................."
+    ./scripts/install_logger.sh
 fi
 #
 echo "--------------------------------------------------"

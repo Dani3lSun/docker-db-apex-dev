@@ -1,8 +1,9 @@
 # Tomcat
-http://mirror.netcologne.de/apache.org/tomcat/tomcat-8/v8.0.43/bin/apache-tomcat-8.0.43.tar.gz
+http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz
 
-# Oracle JDK 8
-http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz
+# Oracle JDK 8 (Linux x64 tar.gz)
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+#http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
 
 # Oracle Database 12.2.0.1 EE
 http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip
@@ -18,3 +19,6 @@ http://download.oracle.com/otn/java/sqldeveloper/sqlcl-4.2.0.17.097.0719-no-jre.
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64
+
+# Logger
+https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip

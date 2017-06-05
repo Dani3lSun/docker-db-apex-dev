@@ -11,7 +11,7 @@ This Docker Image contains the following:
 * Oracle SQLCL 4.2.0.17.097.0719
 * Apache Tomcat 8.0.44
 * Java JDK 8u131
-* Logger 3.1.1
+* OraOpenSource Logger 3.1.1
 
 ## Installation
 

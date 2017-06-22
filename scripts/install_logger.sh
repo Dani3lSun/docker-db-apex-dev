@@ -25,6 +25,14 @@ logger_install(){
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l logger_user/${PASS} @logger_install
 }
 
+logger_disable_admin_privs(){
+    echo "UPDATE logger_prefs SET logger_prefs.pref_value = 'FALSE' WHERE logger_prefs.pref_name = 'PROTECT_ADMIN_PROCS';" > disable_logger_admin_privs.sql
+    echo "COMMIT;" >> disable_logger_admin_privs.sql
+    echo "/" >> disable_logger_admin_privs.sql
+    
+    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l logger_user/${PASS} @disable_logger_admin_privs
+}
+
 logger_public_grants(){
     echo "Creating Logger Public Grants."
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l logger_user/${PASS} @grant_logger_to_user PUBLIC
@@ -58,6 +66,7 @@ cd /files/logger
 logger_create_tablespace
 logger_create_user
 logger_install
+logger_disable_admin_privs
 cd scripts
 logger_public_grants
 logger_public_synonyms

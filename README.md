@@ -9,7 +9,7 @@ This Docker Image contains the following:
 * Oracle APEX 5.1.2
 * Oracle ORDS 3.0.10
 * Oracle SQLCL 4.2.0.17.097.0719
-* Apache Tomcat 8.0.44
+* Apache Tomcat 8.0.45
 * Java JDK 8u131
 * OraOpenSource Logger 3.1.1
 
@@ -36,7 +36,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle APEX 5.1.2](http://download.oracle.com/otn/java/appexpress/apex_5.1.2.zip)
 * [Oracle ORDS 3.0.10](http://download.oracle.com/otn/java/ords/ords.3.0.10.165.06.53.zip)
 * [Oracle SQLCL 4.2.0.17.097.0719](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-4.2.0.17.097.0719-no-jre.zip)
-* [Apache Tomcat 8.0.44](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz)
+* [Apache Tomcat 8.0.45](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.45/bin/apache-tomcat-8.0.45.tar.gz)
 * [Java JDK 8u131 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)

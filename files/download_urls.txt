@@ -11,8 +11,8 @@ http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zi
 # Oracle APEX 5.1.2
 http://download.oracle.com/otn/java/appexpress/apex_5.1.2.zip
 
-# Oracle ORDS 3.0.10
-http://download.oracle.com/otn/java/ords/ords.3.0.10.165.06.53.zip
+# Oracle ORDS 3.0.11
+http://download.oracle.com/otn/java/ords/ords.3.0.11.180.12.34.zip
 
 # Oracle SQLcl
 http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.2.0.184.1230-no-jre.zip

@@ -7,7 +7,7 @@ This Docker Image contains the following:
 * Oracle Linux 7.3
 * Oracle Database 12.2.0.1 Enterprise Edition with non-CDB architecture
 * Oracle APEX 5.1.2
-* Oracle ORDS 3.0.10
+* Oracle ORDS 3.0.11
 * Oracle SQLcl 17.2.0.184.1230
 * Apache Tomcat 8.0.45
 * Java JDK 8u131
@@ -34,7 +34,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 
 * [Oracle Database 12.2.0.1 EE](http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
 * [Oracle APEX 5.1.2](http://download.oracle.com/otn/java/appexpress/apex_5.1.2.zip)
-* [Oracle ORDS 3.0.10](http://download.oracle.com/otn/java/ords/ords.3.0.10.165.06.53.zip)
+* [Oracle ORDS 3.0.11](http://download.oracle.com/otn/java/ords/ords.3.0.11.180.12.34.zip)
 * [Oracle SQLcl 17.2.0.184.1230](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.2.0.184.1230-no-jre.zip)
 * [Apache Tomcat 8.0.45](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.45/bin/apache-tomcat-8.0.45.tar.gz)
 * [Java JDK 8u131 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)

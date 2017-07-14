@@ -12,6 +12,7 @@ This Docker Image contains the following:
 * Apache Tomcat 8.0.45
 * Java JDK 8u131
 * OraOpenSource Logger 3.1.1
+* OraOpenSource OOS Utils 1.0.0
 
 ## Installation
 
@@ -38,7 +39,8 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle SQLcl 17.2.0.184.1230](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.2.0.184.1230-no-jre.zip)
 * [Apache Tomcat 8.0.45](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.45/bin/apache-tomcat-8.0.45.tar.gz)
 * [Java JDK 8u131 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* [OraOpenSource Logger](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
+* [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
+* [OraOpenSource OOS Utils 1.0.0](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
@@ -51,6 +53,7 @@ You can change some Environment Variables directly in the [Dockerfile](https://g
 INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
 INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
 INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
+INSTALL_OOSUTILS=true # Whether install OraOpenSource OOS Utils or Not
 DBCA_TOTAL_MEMORY=2048 # Memory Size of Database
 ORACLE_SID=db12c # SID of Oracle Database
 SERVICE_NAME=db12c # SERVICE_NAME of Oracle Database

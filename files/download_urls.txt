@@ -20,5 +20,8 @@ http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.2.0.184.1230-no-jre.zi
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64
 
-# Logger
+# OraOpenSource Logger
 https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip
+
+# OraOpenSource OOS Utils
+https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip

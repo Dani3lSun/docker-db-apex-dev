@@ -6,6 +6,7 @@ MAINTAINER Daniel Hochleitner <dhochleitner@posteo.de>
 ENV INSTALL_APEX=true \
     INSTALL_SQLCL=true \
     INSTALL_LOGGER=true \
+    INSTALL_OOSUTILS=true \
     DBCA_TOTAL_MEMORY=2048 \
     ORACLE_SID=db12c \
     SERVICE_NAME=db12c \

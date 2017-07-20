@@ -96,6 +96,34 @@ apex_rest_config() {
     echo "ALTER USER APEX_PUBLIC_USER IDENTIFIED BY ${PASS};" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA
 }
 
+apex_allow_all_acl() {
+    echo "BEGIN" > create_allow_all_acl.sql
+    echo "  BEGIN" >> create_allow_all_acl.sql
+    echo "    dbms_network_acl_admin.drop_acl(acl => 'all-network-PUBLIC.xml');" >> create_allow_all_acl.sql
+    echo "  EXCEPTION" >> create_allow_all_acl.sql
+    echo "    WHEN OTHERS THEN" >> create_allow_all_acl.sql
+    echo "      NULL;" >> create_allow_all_acl.sql
+    echo "  END;" >> create_allow_all_acl.sql
+    echo "  dbms_network_acl_admin.create_acl(acl         => 'all-network-PUBLIC.xml'," >> create_allow_all_acl.sql
+    echo "                                    description => 'Allow all network traffic'," >> create_allow_all_acl.sql
+    echo "                                    principal   => 'PUBLIC'," >> create_allow_all_acl.sql
+    echo "                                    is_grant    => TRUE," >> create_allow_all_acl.sql
+    echo "                                    privilege   => 'connect');" >> create_allow_all_acl.sql
+    echo "  dbms_network_acl_admin.add_privilege(acl       => 'all-network-PUBLIC.xml'," >> create_allow_all_acl.sql
+    echo "                                       principal => 'PUBLIC'," >> create_allow_all_acl.sql
+    echo "                                       is_grant  => TRUE," >> create_allow_all_acl.sql
+    echo "                                       privilege => 'resolve');" >> create_allow_all_acl.sql
+    echo "  dbms_network_acl_admin.assign_acl(acl  => 'all-network-PUBLIC.xml'," >> create_allow_all_acl.sql
+    echo "                                    host => '*');" >> create_allow_all_acl.sql
+    echo "END;" >> create_allow_all_acl.sql
+    echo "/" >> create_allow_all_acl.sql
+    echo "sho err" >> create_allow_all_acl.sql
+    echo "COMMIT;" >> create_allow_all_acl.sql
+    echo "/" >> create_allow_all_acl.sql
+    
+    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA @create_allow_all_acl.sql
+}
+
 unzip_apex(){
     echo "Extracting APEX"
     rm -rf ${ORACLE_HOME}/apex
@@ -110,6 +138,7 @@ apex_create_tablespace
 apex_install
 apex_change_admin_pwd
 apex_rest_config
+apex_allow_all_acl
 if [ ! -z "${APEX_ADDITIONAL_LANG}" ]; then
     apex_install_lang
 fi

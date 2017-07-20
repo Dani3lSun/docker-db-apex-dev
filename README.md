@@ -13,6 +13,7 @@ This Docker Image contains the following:
 * Java JDK 8u141
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.0
+* APEX Office Print 3.x (Cloud Package)
 
 ## Installation
 
@@ -41,6 +42,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Java JDK 8u141 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.0](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
+* [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
@@ -54,6 +56,7 @@ INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or
 INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
 INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
 INSTALL_OOSUTILS=true # Whether install OraOpenSource OOS Utils or Not
+INSTALL_AOP=true # Whether install APEX Office Print (AOP) or Not (Cloud Package)
 DBCA_TOTAL_MEMORY=2048 # Memory Size of Database
 ORACLE_SID=db12c # SID of Oracle Database
 SERVICE_NAME=db12c # SERVICE_NAME of Oracle Database
@@ -114,6 +117,14 @@ Workspace | INTERNAL
 User | ADMIN
 Password | OrclAPEX12c!
 
+*If APEX Office Print is installed*
+
+Property | Value
+-------- | -----
+Workspace | AOP
+User | ADMIN
+Password | OrclAPEX12c!
+
 ### Database Connections
 
 To access the database e.g. from SQL Developer you configure the following properties:
@@ -135,6 +146,8 @@ apex_listener | oracle
 apex\_rest\_public\_user | oracle
 apex\_public\_user | oracle
 logger\_user | oracle
+oosutils\_user | oracle
+aop | oracle
 
 Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/db12c```
 

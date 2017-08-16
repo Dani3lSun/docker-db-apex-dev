@@ -10,7 +10,7 @@ This Docker Image contains the following:
 * Oracle ORDS 3.0.11
 * Oracle SQLcl 17.2.0.184.1230
 * Apache Tomcat 8.0.45
-* Java JDK 8u141
+* Java JDK 8u144
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.0
 * APEX Office Print 3.x (Cloud Package)
@@ -39,7 +39,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle ORDS 3.0.11](http://download.oracle.com/otn/java/ords/ords.3.0.11.180.12.34.zip)
 * [Oracle SQLcl 17.2.0.184.1230](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.2.0.184.1230-no-jre.zip)
 * [Apache Tomcat 8.0.45](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.45/bin/apache-tomcat-8.0.45.tar.gz)
-* [Java JDK 8u141 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Java JDK 8u144 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.0](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)

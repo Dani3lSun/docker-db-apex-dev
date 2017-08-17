@@ -81,7 +81,7 @@ docker build -t <your-docker-image-name> .
 docker build -t db-apex-dev-image .
 ```
 
-*Please be sure to have enough disk space left. Building this image needs around 40-50GB of free space. The successfully built image has a size of 15-16GB*
+*Note: Please be sure to have enough disk space left. Building this image needs around 40-50GB of free space. The successfully built image has a size of 15-16GB*
 
 5. **Run the Docker Container**
 

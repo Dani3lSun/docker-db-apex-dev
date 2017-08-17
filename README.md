@@ -27,8 +27,6 @@ Complete the following steps to create a new container:
 git clone https://github.com/Dani3lSun/docker-db-apex-dev.git
 ```
 
-*Please be sure to have enough disk space left. Building this image needs around 40-50GB of free space. The successfully built image has a size of 15-16GB*
-
 2. **Download missing Software Components**
 
 Thus you have to agree to the License Agreement of Oracle for parts of this Docker Image, you have to download the Install Files by your own.
@@ -82,6 +80,8 @@ docker build -t <your-docker-image-name> .
 # e.g
 docker build -t db-apex-dev-image .
 ```
+
+*Please be sure to have enough disk space left. Building this image needs around 40-50GB of free space. The successfully built image has a size of 15-16GB*
 
 5. **Run the Docker Container**
 

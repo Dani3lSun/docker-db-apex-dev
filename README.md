@@ -1,5 +1,7 @@
 # Oracle Database & APEX Developer Docker Image
 
+[![APEX Community](https://cdn.rawgit.com/Dani3lSun/apex-github-badges/78c5adbe/badges/apex-community-badge.svg)](https://github.com/Dani3lSun/apex-github-badges)
+
 ## Content
 
 This Docker Image contains the following:

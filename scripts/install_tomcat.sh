@@ -22,6 +22,8 @@ echo 'export CATALINA_OPTS="$CATALINA_OPTS -XX:PermSize=128m"' >> ${TOMCAT_HOME}
 echo 'export CATALINA_OPTS="$CATALINA_OPTS -XX:MaxPermSize=256m"' >> ${TOMCAT_HOME}/bin/setenv.sh
 chmod a+x ${TOMCAT_HOME}/bin/setenv.sh
 
+echo 'tomcat.util.http.parser.HttpParser.requestTargetAllow=|' >> ${TOMCAT_HOME}/conf/catalina.properties
+
 echo 'export CATALINA_HOME="'${TOMCAT_HOME}'"' > ${TOMCAT_HOME}/.profile
 echo 'export JAVA_HOME="'${JAVA_HOME}'"' >> ${TOMCAT_HOME}/.profile
 chmod a+x ${TOMCAT_HOME}/.profile

@@ -3,7 +3,7 @@ http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.46/bin/apache-tomcat-8.0.46.t
 
 # Oracle JDK 8 (Linux x64 tar.gz)
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-#http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz
+#http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
 
 # Oracle Database 12.2.0.1 EE
 http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip

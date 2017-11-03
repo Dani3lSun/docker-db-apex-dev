@@ -42,6 +42,12 @@ aop_install_db(){
 aop_install_apex(){
     echo "Creating AOP APEX Application"
 
+	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
+SELECT username FROM all_users WHERE username like 'APEX_0%';
+EXIT;
+EOF`
+
     echo "begin" > install_aop_app.sql
     echo "apex_application_install.set_workspace('AOP');" >> install_aop_app.sql
     echo "apex_application_install.generate_offset;" >> install_aop_app.sql
@@ -49,7 +55,13 @@ aop_install_apex(){
     echo "apex_application_install.set_application_id(150);" >> install_aop_app.sql
     echo "end;" >> install_aop_app.sql
     echo "/" >> install_aop_app.sql
-    echo "@aop_sample3_apex_app_51.sql" >> install_aop_app.sql
+    if [ "$APEX_SCHEMA" = "APEX_050000" ]; then
+      echo "Install AOP Sample App for APEX 5.0.x"
+      echo "@aop_sample3_apex_app_50.sql" >> install_aop_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_050100" ]; then
+      echo "Install AOP Sample App for APEX 5.1.x"
+      echo "@aop_sample3_apex_app_51.sql" >> install_aop_app.sql
+    fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app
 }

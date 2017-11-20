@@ -7,7 +7,7 @@
 
 This Docker Image contains the following:
 
-* Oracle Linux 7.3
+* Oracle Linux 7.4
 * Oracle Database 12.2.0.1 Enterprise Edition with non-CDB architecture
 * Oracle APEX 5.1.3
 * Oracle ORDS 3.0.12
@@ -15,7 +15,7 @@ This Docker Image contains the following:
 * Apache Tomcat 8.0.47
 * Java JDK 8u151
 * OraOpenSource Logger 3.1.1
-* OraOpenSource OOS Utils 1.0.0
+* OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 3.x (Cloud Package)
 
 ## Installation
@@ -44,7 +44,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Apache Tomcat 8.0.47](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.47/bin/apache-tomcat-8.0.47.tar.gz)
 * [Java JDK 8u151 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
-* [OraOpenSource OOS Utils 1.0.0](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
+* [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 

@@ -19,4 +19,5 @@ if [ -f /etc/selinux/config ]; then
 fi
 
 # update YUM
+yum clean all
 yum update -y

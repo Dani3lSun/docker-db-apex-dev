@@ -8,11 +8,11 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 # Oracle Database 12.2.0.1 EE
 http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip
 
-# Oracle APEX 5.1.3
-http://download.oracle.com/otn/java/appexpress/apex_5.1.3.zip
+# Oracle APEX 5.1.4
+http://download.oracle.com/otn/java/appexpress/apex_5.1.4.zip
 
 # Oracle ORDS 17.4
-http://download.oracle.com/otn/java/ords/ords.17.4.0.348.21.07.zip
+http://download.oracle.com/otn/java/ords/ords.17.4.1.353.06.48.zip
 
 # Oracle SQLcl
 http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.3.0.271.1943-no-jre.zip

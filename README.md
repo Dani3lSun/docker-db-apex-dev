@@ -11,7 +11,7 @@ This Docker Image contains the following:
 * Oracle Database 12.2.0.1 Enterprise Edition with non-CDB architecture
 * Oracle APEX 5.1.4
 * Oracle ORDS 17.4
-* Oracle SQLcl 17.3.0.271.1943
+* Oracle SQLcl 17.4.0.354.2224
 * Apache Tomcat 8.0.48
 * Java JDK 8u152
 * OraOpenSource Logger 3.1.1
@@ -40,7 +40,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle Database 12.2.0.1 EE](http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
 * [Oracle APEX 5.1.4](http://download.oracle.com/otn/java/appexpress/apex_5.1.4.zip)
 * [Oracle ORDS 17.4](http://download.oracle.com/otn/java/ords/ords.17.4.1.353.06.48.zip)
-* [Oracle SQLcl 17.3.0.271.1943](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.3.0.271.1943-no-jre.zip)
+* [Oracle SQLcl 17.4.0.354.2224](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.4.0.354.2224-no-jre.zip)
 * [Apache Tomcat 8.0.48](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.48/bin/apache-tomcat-8.0.48.tar.gz)
 * [Java JDK 8u152 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)

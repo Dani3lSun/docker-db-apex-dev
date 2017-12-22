@@ -15,7 +15,7 @@ http://download.oracle.com/otn/java/appexpress/apex_5.1.4.zip
 http://download.oracle.com/otn/java/ords/ords.17.4.1.353.06.48.zip
 
 # Oracle SQLcl
-http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.3.0.271.1943-no-jre.zip
+http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.4.0.354.2224-no-jre.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64

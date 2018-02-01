@@ -20,7 +20,6 @@ wget
 
 
 # environment variables (not configurable when creating a container)
-echo "export JAVA_HOME=${JAVA_HOME}" > /.oracle_env
 echo "export ORACLE_HOME=${ORACLE_HOME}" >> /.oracle_env
 echo "export ORACLE_BASE=${ORACLE_BASE}" >> /.oracle_env
 echo "export ORACLE_SID=${ORACLE_SID}" >> /.oracle_env

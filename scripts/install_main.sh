@@ -27,12 +27,12 @@ echo "Image Setup......................................."
 ./scripts/image_setup.sh
 #
 echo "--------------------------------------------------"
-echo "Installing JAVA..................................."
-./scripts/install_java.sh
-#
-echo "--------------------------------------------------"
 echo "Installing ORACLE DB12201 EE......................"
 ./scripts/install_oracle12ee.sh
+#
+echo "--------------------------------------------------"
+echo "Installing JAVA..................................."
+./scripts/install_java.sh
 #
 if [ ${INSTALL_SQLCL} == "true" ]; then
     echo "--------------------------------------------------"

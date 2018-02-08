@@ -23,6 +23,10 @@ echo "TIME_ZONE: ${TIME_ZONE}"
 #
 #
 echo "--------------------------------------------------"
+echo "Validations......................................."
+./scripts/validations.sh || exit 1
+#
+echo "--------------------------------------------------"
 echo "Image Setup......................................."
 ./scripts/image_setup.sh
 #

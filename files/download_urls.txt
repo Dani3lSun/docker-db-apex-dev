@@ -1,21 +1,20 @@
 # Tomcat
-http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.49/bin/apache-tomcat-8.0.49.tar.gz
+http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.50/bin/apache-tomcat-8.0.50.tar.gz
 
 # Oracle JDK 8 (Linux x64 tar.gz)
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-#http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-x64.tar.gz
 
 # Oracle Database 12.2.0.1 EE
 http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip
 
-# Oracle APEX 5.1.4
+# Oracle APEX
 http://download.oracle.com/otn/java/appexpress/apex_5.1.4.zip
 
-# Oracle ORDS 17.4
-http://download.oracle.com/otn/java/ords/ords.17.4.1.353.06.48.zip
+# Oracle ORDS
+http://download.oracle.com/otn/java/ords/ords.18.1.1.95.1251.zip
 
 # Oracle SQLcl
-http://download.oracle.com/otn/java/sqldeveloper/sqlcl-17.4.0.354.2224-no-jre.zip
+http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.1.0.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64

@@ -1,5 +1,5 @@
 # Tomcat
-http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.50/bin/apache-tomcat-8.0.50.tar.gz
+http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.51/bin/apache-tomcat-8.0.51.tar.gz
 
 # Oracle JDK 8 (Linux x64 tar.gz)
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html

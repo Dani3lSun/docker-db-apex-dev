@@ -1,5 +1,5 @@
 # Tomcat
-http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.51/bin/apache-tomcat-8.0.51.tar.gz
+http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz
 
 # Oracle JDK 8 (Linux x64 tar.gz)
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
@@ -8,7 +8,7 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip
 
 # Oracle APEX
-http://download.oracle.com/otn/java/appexpress/apex_5.1.4.zip
+http://download.oracle.com/otn/java/appexpress/apex_18.1.zip
 
 # Oracle ORDS
 http://download.oracle.com/otn/java/ords/ords.18.1.1.95.1251.zip

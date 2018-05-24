@@ -41,7 +41,7 @@ apex_change_admin_pwd(){
 
 	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
-SELECT username FROM all_users WHERE username like 'APEX_0%';
+SELECT ao.owner FROM all_objects ao WHERE ao.object_name = 'WWV_FLOW' AND ao.object_type = 'PACKAGE' AND ao.owner LIKE 'APEX_%';
 EXIT;
 EOF`
 
@@ -120,7 +120,7 @@ apex_allow_all_acl() {
     echo "sho err" >> create_allow_all_acl.sql
     echo "COMMIT;" >> create_allow_all_acl.sql
     echo "/" >> create_allow_all_acl.sql
-    
+
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA @create_allow_all_acl.sql
 }
 

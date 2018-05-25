@@ -15,7 +15,7 @@ aop_create_user(){
 
 aop_create_workspace(){
     echo "Creating AOP APEX Workspace"
-    
+
     echo 'DECLARE' > create_workspace.sql
     echo 'l_workspace_id NUMBER;' >> create_workspace.sql
     echo 'BEGIN' >> create_workspace.sql
@@ -32,9 +32,9 @@ aop_create_workspace(){
 
 aop_install_db(){
     echo "Installing AOP"
-    
+
     sed -i -E 's:aop_sample_db_obj:aop_sample3_db_obj:g' install.sql
-    
+
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_db_sample_obj
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install
 }
@@ -44,7 +44,7 @@ aop_install_apex(){
 
 	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
-SELECT username FROM all_users WHERE username like 'APEX_0%';
+SELECT ao.owner FROM all_objects ao WHERE ao.object_name = 'WWV_FLOW' AND ao.object_type = 'PACKAGE' AND ao.owner LIKE 'APEX_%';
 EXIT;
 EOF`
 
@@ -61,6 +61,9 @@ EOF`
     elif [ "$APEX_SCHEMA" = "APEX_050100" ]; then
       echo "Install AOP Sample App for APEX 5.1.x"
       echo "@aop_sample3_apex_app_51.sql" >> install_aop_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_180100" ]; then
+      echo "Install AOP Sample App for APEX 5.1.x / 18.1.x"
+      echo "@aop_sample3_apex_app_51.sql" >> install_aop_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app
@@ -69,10 +72,10 @@ EOF`
 
 aop_public_grants(){
     echo "Creating AOP Public Grants."
-    
+
     echo "grant execute on aop.aop_api3_pkg to PUBLIC;" > create_aop_public_grants.sql
     echo "grant execute on aop.aop_plsql3_pkg to PUBLIC;" >> create_aop_public_grants.sql
-    
+
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @create_aop_public_grants
 }
 

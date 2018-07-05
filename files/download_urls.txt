@@ -11,10 +11,10 @@ http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zi
 http://download.oracle.com/otn/java/appexpress/apex_18.1.zip
 
 # Oracle ORDS
-http://download.oracle.com/otn/java/ords/ords.18.1.1.95.1251.zip
+http://download.oracle.com/otn/java/ords/ords-18.2.0.zip
 
 # Oracle SQLcl
-http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.1.1.zip
+http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.2.0.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64

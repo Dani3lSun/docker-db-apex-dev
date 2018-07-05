@@ -70,7 +70,7 @@ apex_install_lang(){
 
 	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
-SELECT username FROM all_users WHERE username like 'APEX_0%';
+SELECT ao.owner FROM all_objects ao WHERE ao.object_name = 'WWV_FLOW' AND ao.object_type = 'PACKAGE' AND ao.owner LIKE 'APEX_%';
 EXIT;
 EOF`
 

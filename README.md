@@ -8,15 +8,16 @@
 This Docker Image contains the following:
 
 * Oracle Linux 7.5
-* Oracle Database 12.2.0.1 Enterprise Edition with non-CDB architecture
+* Oracle Database 12.2.0.1 or 18.3 Enterprise Edition with non-CDB architecture
 * Oracle APEX 18.1.0
 * Oracle ORDS 18.2
 * Oracle SQLcl 18.2
-* Apache Tomcat 8.0.52
+* Apache Tomcat 8.0.53
 * Java JDK 8u171
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 3.x (Cloud Package)
+* Swagger-UI 3.x
 
 ## Installation
 
@@ -38,14 +39,16 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 **Direct Links:**
 
 * [Oracle Database 12.2.0.1 EE](http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
+* [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
 * [Oracle APEX 18.1.0](http://download.oracle.com/otn/java/appexpress/apex_18.1.zip)
 * [Oracle ORDS 18.2](http://download.oracle.com/otn/java/ords/ords-18.2.0.zip)
 * [Oracle SQLcl 18.2](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.2.0.zip)
-* [Apache Tomcat 8.0.52](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz)
+* [Apache Tomcat 8.0.53](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.53/bin/apache-tomcat-8.0.53.tar.gz)
 * [Java JDK 8u171 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
+* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.17.5.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
@@ -60,17 +63,20 @@ INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
 INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
 INSTALL_OOSUTILS=true # Whether install OraOpenSource OOS Utils or Not
 INSTALL_AOP=true # Whether install APEX Office Print (AOP) or Not (Cloud Package)
+INSTALL_SWAGGER=true # Whether install Swagger-UI for REST docs or Not
 DBCA_TOTAL_MEMORY=2048 # Memory Size of Database
-ORACLE_SID=db12c # SID of Oracle Database
-SERVICE_NAME=db12c # SERVICE_NAME of Oracle Database
+ORACLE_SID=orcl # SID of Oracle Database
+SERVICE_NAME=orcl # SERVICE_NAME of Oracle Database
+DB_INSTALL_VERSION=18 # Database version to install, 12 or 18
 ORACLE_BASE=/u01/app/oracle # Path to ORACLE_BASE Directory
-ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory
+ORACLE_HOME12=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory of 12.2 database
+ORACLE_HOME18=/u01/app/oracle/product/18.0.0/dbhome # Path to ORACLE_HOME Directory of 18.3 database
 ORACLE_INVENTORY=/u01/app/oraInventory # Path to ORACLE_INVENTORY Directory
 PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...), Tomcat Admin and SSH
 ORDS_HOME=/u01/ords # Path to ORDS_HOME Directory
 JAVA_HOME=/opt/java # Path to JAVA_HOME Directory
 TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
-APEX_PASS=OrclAPEX12c! # Admin Password of Oracle APEX Web Login (Caution: Oracle APEX Password Policy)
+APEX_PASS=OrclAPEX1999! # Admin Password of Oracle APEX Web Login (Caution: Oracle APEX Password Policy)
 APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
 TIME_ZONE=UTC # Timezone of your favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
 ```
@@ -120,7 +126,7 @@ Property | Value
 -------- | -----
 Workspace | INTERNAL
 User | ADMIN
-Password | OrclAPEX12c!
+Password | OrclAPEX1999!
 
 *If APEX Office Print is installed*
 
@@ -128,7 +134,7 @@ Property | Value
 -------- | -----
 Workspace | AOP
 User | ADMIN
-Password | OrclAPEX12c!
+Password | OrclAPEX1999!
 
 ### Database Connections
 
@@ -138,8 +144,8 @@ Property | Value
 -------- | -----
 Hostname | localhost
 Port | 1521
-SID | db12c
-Service | db12c
+SID | orcl
+Service | orcl
 
 The configured user with their credentials are:
 
@@ -154,7 +160,7 @@ logger\_user | oracle
 oosutils\_user | oracle
 aop | oracle
 
-Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/db12c```
+Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/orcl```
 
 ### SSH
 

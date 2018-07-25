@@ -29,6 +29,10 @@ if [ ! -f /scripts/install_oracle12ee.sh ]; then
     echo "/scripts/install_oracle12ee.sh not found!"
     exit 1
 fi
+if [ ! -f /scripts/install_oracle18ee.sh ]; then
+    echo "/scripts/install_oracle18ee.sh not found!"
+    exit 1
+fi
 if [ ! -f /scripts/install_ords.sh ]; then
     echo "/scripts/install_ords.sh not found!"
     exit 1
@@ -41,6 +45,10 @@ if [ ! -f /scripts/install_ssh.sh ]; then
     echo "/scripts/install_ssh.sh not found!"
     exit 1
 fi
+if [ ! -f /scripts/install_swagger.sh ]; then
+    echo "/scripts/install_swagger.sh not found!"
+    exit 1
+fi
 if [ ! -f /scripts/install_tomcat.sh ]; then
     echo "/scripts/install_tomcat.sh not found!"
     exit 1
@@ -51,8 +59,12 @@ if [ ! -f /scripts/setenv.sh ]; then
 fi
 #
 echo "......Checking Files......"
-if [ ! -f /files/db_install.rsp ]; then
-    echo "/files/db_install.rsp not found!"
+if [ ! -f /files/db_install_12.rsp ]; then
+    echo "/files/db_install_12.rsp not found!"
+    exit 1
+fi
+if [ ! -f /files/db_install_18.rsp ]; then
+    echo "/files/db_install_18.rsp not found!"
     exit 1
 fi
 if [ ! -f /files/ords_params.properties ]; then
@@ -77,9 +89,17 @@ if ! ls /files/jdk-8*.tar.gz 1> /dev/null 2>&1; then
     echo "Java not found!"
     exit 1
 fi
-if ! ls /files/linuxx64_12201_database.zip 1> /dev/null 2>&1; then
-    echo "Oracle DB 12.2.0.1 not found!"
-    exit 1
+if [ ${DB_INSTALL_VERSION} == "12" ]; then
+  if ! ls /files/linuxx64_12201_database.zip 1> /dev/null 2>&1; then
+      echo "Oracle DB 12.2.0.1 not found!"
+      exit 1
+  fi
+fi
+if [ ${DB_INSTALL_VERSION} == "18" ]; then
+  if ! ls /files/LINUX.X64_180000_db_home.zip 1> /dev/null 2>&1; then
+      echo "Oracle DB 18.0.0 not found!"
+      exit 1
+  fi
 fi
 if [ ${INSTALL_SQLCL} == "true" ]; then
     if ! ls /files/sqlcl*.zip 1> /dev/null 2>&1; then
@@ -115,6 +135,12 @@ if [ ${INSTALL_APEX} == "true" ]; then
     if [ ${INSTALL_AOP} == "true" ]; then
         if ! ls /files/aop_cloud_v*.zip 1> /dev/null 2>&1; then
             echo "APEX Office Print not found!"
+            exit 1
+        fi
+    fi
+    if [ ${INSTALL_SWAGGER} == "true" ]; then
+        if ! ls /files/v3.*.zip 1> /dev/null 2>&1; then
+            echo "Swagger-UI not found!"
             exit 1
         fi
     fi

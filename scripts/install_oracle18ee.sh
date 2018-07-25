@@ -12,7 +12,7 @@ useradd --create-home --gid oinstall --groups oinstall,dba --uid 54321 oracle
 echo 'oracle:'${PASS} | chpasswd
 
 # install required OS components
-yum install -y oracle-database-server-12cR2-preinstall.x86_64 \
+yum install -y oracle-database-preinstall-18c.x86_64 \
 perl \
 tar \
 unzip \
@@ -52,35 +52,33 @@ chmod +x /usr/local/bin/gosu
 
 # extract Oracle database software
 cd /files
-chown oracle:oinstall /files/linuxx64_12201_database.zip
+chown oracle:oinstall /files/LINUX.X64_180000_db_home.zip
 echo "extracting Oracle database software..."
-gosu oracle bash -c "unzip -o /files/linuxx64_12201_database.zip -d /files/" > /dev/null
-rm -f /files/linuxx64_12201_database.zip
+gosu oracle bash -c "mkdir -p ${ORACLE_HOME}"
+gosu oracle bash -c "unzip -o /files/LINUX.X64_180000_db_home.zip -d ${ORACLE_HOME}" > /dev/null
+rm -f /files/LINUX.X64_180000_db_home.zip
 
 # install Oracle software into ${ORACLE_BASE}
-sed -i -E 's:#ORACLE_INVENTORY#:'${ORACLE_INVENTORY}':g' /files/db_install_12.rsp
-sed -i -E 's:#ORACLE_HOME#:'${ORACLE_HOME}':g' /files/db_install_12.rsp
-sed -i -E 's:#ORACLE_BASE#:'${ORACLE_BASE}':g' /files/db_install_12.rsp
+sed -i -E 's:#ORACLE_INVENTORY#:'${ORACLE_INVENTORY}':g' /files/db_install_18.rsp
+sed -i -E 's:#ORACLE_HOME#:'${ORACLE_HOME}':g' /files/db_install_18.rsp
+sed -i -E 's:#ORACLE_BASE#:'${ORACLE_BASE}':g' /files/db_install_18.rsp
 
-chown oracle:oinstall /files/db_install_12.rsp
+chown oracle:oinstall /files/db_install_18.rsp
 echo "running Oracle installer to install database software only..."
-gosu oracle bash -c "/files/database/runInstaller -silent -force -waitforcompletion -responsefile /files/db_install_12.rsp -ignoresysprereqs -ignoreprereq"
+gosu oracle bash -c "${ORACLE_HOME}/runInstaller -silent -force -waitforcompletion -responsefile /files/db_install_18.rsp -ignorePrereqFailure"
 
 # Run Oracle root scripts
 echo "running Oracle root scripts..."
 #/u01/app/oraInventory/orainstRoot.sh > /dev/null 2>&1
 echo | ${ORACLE_HOME}/root.sh > /dev/null 2>&1 || true
 
-# Delete installer files
-rm -fr /files/database
-
 # Creating Database
 echo "Creating database. SID: ${ORACLE_SID}"
-mv /u01/app/oracle-product/12.2.0.1/dbhome/dbs ${ORACLE_BASE}/dbs
-ln -s ${ORACLE_BASE}/dbs /u01/app/oracle-product/12.2.0.1/dbhome/dbs
+mv /u01/app/oracle-product/18.0.0/dbhome/dbs ${ORACLE_BASE}/dbs
+ln -s ${ORACLE_BASE}/dbs /u01/app/oracle-product/18.0.0/dbhome/dbs
 gosu oracle bash -c "${ORACLE_HOME}/bin/lsnrctl start"
 gosu oracle bash -c "${ORACLE_HOME}/bin/dbca -silent -createDatabase -templateName General_Purpose.dbc \
-  -gdbname ${SERVICE_NAME} -sid ${ORACLE_SID} -responseFile NO_VALUE -characterSet AL32UTF8 \
+  -gdbname ${SERVICE_NAME} -sid ${ORACLE_SID} -responseFile NO_VALUE -characterSet AL32UTF8 -datafileDestination /u01/app/oracle/oradata/ \
 -totalMemory $DBCA_TOTAL_MEMORY -emConfiguration NONE -sysPassword ${PASS} -systemPassword ${PASS}"
 echo "Configure listener."
 gosu oracle bash -c 'echo -e "ALTER SYSTEM SET LOCAL_LISTENER='"'"'(ADDRESS = (PROTOCOL = TCP)(HOST = $(hostname))(PORT = 1521))'"'"' SCOPE=BOTH;\n ALTER SYSTEM REGISTER;\n EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l / as sysdba'

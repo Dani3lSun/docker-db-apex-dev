@@ -2,8 +2,16 @@
 
 logger_create_tablespace(){
     echo "Creating Logger Tablespace."
-	${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
-		CREATE TABLESPACE LOGGER_TS DATAFILE '${ORACLE_BASE}/oradata/${ORACLE_SID}/logger01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M;
+
+    if [ ${DB_INSTALL_VERSION} == "12" ]; then
+        DATAFILE_SID=${ORACLE_SID}
+    fi
+    if [ ${DB_INSTALL_VERSION} == "18" ]; then
+        DATAFILE_SID=${ORACLE_SID^^}
+    fi
+
+    ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+		CREATE TABLESPACE LOGGER_TS DATAFILE '${ORACLE_BASE}/oradata/${DATAFILE_SID}/logger01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M;
 EOF
 }
 
@@ -29,7 +37,7 @@ logger_disable_admin_privs(){
     echo "UPDATE logger_prefs SET logger_prefs.pref_value = 'FALSE' WHERE logger_prefs.pref_name = 'PROTECT_ADMIN_PROCS';" > disable_logger_admin_privs.sql
     echo "COMMIT;" >> disable_logger_admin_privs.sql
     echo "/" >> disable_logger_admin_privs.sql
-    
+
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l logger_user/${PASS} @disable_logger_admin_privs
 }
 

@@ -24,8 +24,16 @@ apex_epg_config(){
 apex_create_tablespace(){
     cd ${ORACLE_HOME}/apex
     echo "Creating APEX tablespace."
-	${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
-		CREATE TABLESPACE apex DATAFILE '${ORACLE_BASE}/oradata/${ORACLE_SID}/apex01.dbf' SIZE 100M AUTOEXTEND ON NEXT 10M;
+
+    if [ ${DB_INSTALL_VERSION} == "12" ]; then
+        DATAFILE_SID=${ORACLE_SID}
+    fi
+    if [ ${DB_INSTALL_VERSION} == "18" ]; then
+        DATAFILE_SID=${ORACLE_SID^^}
+    fi
+
+    ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+		CREATE TABLESPACE apex DATAFILE '${ORACLE_BASE}/oradata/${DATAFILE_SID}/apex01.dbf' SIZE 100M AUTOEXTEND ON NEXT 10M;
 EOF
 }
 
@@ -39,7 +47,7 @@ apex_change_admin_pwd(){
     cd $ORACLE_HOME/apex
     echo "Changing APEX Admin Password"
 
-	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+    APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
 SELECT ao.owner FROM all_objects ao WHERE ao.object_name = 'WWV_FLOW' AND ao.object_type = 'PACKAGE' AND ao.owner LIKE 'APEX_%';
 EXIT;
@@ -56,7 +64,7 @@ EOF`
     echo "end;" >> apxchpwd_custom.sql
     echo "/" >> apxchpwd_custom.sql
 
-	${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+    ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 ALTER SESSION SET CURRENT_SCHEMA=${APEX_SCHEMA};
 @apxchpwd_custom.sql
 EXIT;
@@ -68,13 +76,13 @@ apex_install_lang(){
     echo "Installing APEX Language Pack ${APEX_ADDITIONAL_LANG}"
     export NLS_LANG=AMERICAN_AMERICA.AL32UTF8;
 
-	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+    APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
 SELECT ao.owner FROM all_objects ao WHERE ao.object_name = 'WWV_FLOW' AND ao.object_type = 'PACKAGE' AND ao.owner LIKE 'APEX_%';
 EXIT;
 EOF`
 
-	${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+    ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 ALTER SESSION SET CURRENT_SCHEMA=${APEX_SCHEMA};
 @load_${APEX_ADDITIONAL_LANG}.sql
 EXIT;

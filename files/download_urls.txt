@@ -20,7 +20,7 @@ http://download.oracle.com/otn/java/ords/ords-18.2.0.zip
 http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.2.0.zip
 
 # Swagger-UI
-https://github.com/swagger-api/swagger-ui/archive/v3.17.5.zip
+https://github.com/swagger-api/swagger-ui/archive/v3.19.0.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64

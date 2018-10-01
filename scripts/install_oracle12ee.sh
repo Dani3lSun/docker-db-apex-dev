@@ -30,6 +30,7 @@ echo "export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib" >> /.oracle_
 echo "export TMP=/tmp" >> /.oracle_env
 echo "export TMPDIR=\$TMP" >> /.oracle_env
 echo "export TERM=linux" >> /.oracle_env # avoid in sqlcl: "tput: No value for $TERM and no -T specified"
+echo "export NLS_LANG=American_America.AL32UTF8" >> /.oracle_env
 chmod +x /.oracle_env
 
 # set environment

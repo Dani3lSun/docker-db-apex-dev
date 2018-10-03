@@ -9,11 +9,11 @@ This Docker Image contains the following:
 
 * Oracle Linux 7.5
 * Oracle Database 12.2.0.1 or 18.3 Enterprise Edition with non-CDB architecture
-* Oracle APEX 18.1.0
-* Oracle ORDS 18.2
-* Oracle SQLcl 18.2
+* Oracle APEX 18.2
+* Oracle ORDS 18.3
+* Oracle SQLcl 18.3
 * Apache Tomcat 8.0.53
-* Java JDK 8u171
+* Java JDK 8u181
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 3.x (Cloud Package)

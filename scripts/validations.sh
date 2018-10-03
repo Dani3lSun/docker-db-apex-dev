@@ -139,7 +139,7 @@ if [ ${INSTALL_APEX} == "true" ]; then
         fi
     fi
     if [ ${INSTALL_SWAGGER} == "true" ]; then
-        if ! ls /files/v3.*.zip 1> /dev/null 2>&1; then
+        if ! ls /files/swagger-ui*.zip 1> /dev/null 2>&1; then
             echo "Swagger-UI not found!"
             exit 1
         fi

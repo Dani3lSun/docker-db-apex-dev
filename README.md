@@ -40,15 +40,15 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 
 * [Oracle Database 12.2.0.1 EE](http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
 * [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
-* [Oracle APEX 18.1.0](http://download.oracle.com/otn/java/appexpress/apex_18.1.zip)
-* [Oracle ORDS 18.2](http://download.oracle.com/otn/java/ords/ords-18.2.0.zip)
-* [Oracle SQLcl 18.2](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.2.0.zip)
+* [Oracle APEX 18.2](http://download.oracle.com/otn/java/appexpress/apex_18.2.zip)
+* [Oracle ORDS 18.3](http://download.oracle.com/otn/java/ords/ords-18.3.0.270.1456.zip)
+* [Oracle SQLcl 18.3](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.3.0.259.2029.zip)
 * [Apache Tomcat 8.0.53](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.53/bin/apache-tomcat-8.0.53.tar.gz)
 * [Java JDK 8u181 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
-* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.19.0.zip)
+* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.19.2.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**

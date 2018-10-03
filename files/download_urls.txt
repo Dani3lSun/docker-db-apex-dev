@@ -11,16 +11,16 @@ http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zi
 https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip
 
 # Oracle APEX
-http://download.oracle.com/otn/java/appexpress/apex_18.1.zip
+http://download.oracle.com/otn/java/appexpress/apex_18.2.zip
 
 # Oracle ORDS
-http://download.oracle.com/otn/java/ords/ords-18.2.0.zip
+http://download.oracle.com/otn/java/ords/ords-18.3.0.270.1456.zip
 
 # Oracle SQLcl
-http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.2.0.zip
+http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.3.0.259.2029.zip
 
 # Swagger-UI
-https://github.com/swagger-api/swagger-ui/archive/v3.19.0.zip
+https://github.com/swagger-api/swagger-ui/archive/v3.19.2.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64

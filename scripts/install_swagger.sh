@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unzip_and_move(){
-  unzip -o v3.*.zip
+  unzip -o swagger-ui*.zip
   mv swagger-ui*/dist ${TOMCAT_HOME}/webapps/swagger-ui
 }
 

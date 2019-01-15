@@ -7,13 +7,13 @@
 
 This Docker Image contains the following:
 
-* Oracle Linux 7.5
+* Oracle Linux 7.6
 * Oracle Database 12.2.0.1 or 18.3 Enterprise Edition with non-CDB architecture
 * Oracle APEX 18.2
-* Oracle ORDS 18.3
-* Oracle SQLcl 18.3
-* Apache Tomcat 8.0.53
-* Java JDK 8u181
+* Oracle ORDS 18.4
+* Oracle SQLcl 18.4
+* Apache Tomcat 8.5.37
+* Java JDK 8u201
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 3.x (Cloud Package)
@@ -41,14 +41,14 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle Database 12.2.0.1 EE](http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
 * [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
 * [Oracle APEX 18.2](http://download.oracle.com/otn/java/appexpress/apex_18.2.zip)
-* [Oracle ORDS 18.3](http://download.oracle.com/otn/java/ords/ords-18.3.0.270.1456.zip)
-* [Oracle SQLcl 18.3](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.3.0.259.2029.zip)
-* [Apache Tomcat 8.0.53](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.0.53/bin/apache-tomcat-8.0.53.tar.gz)
-* [Java JDK 8u181 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Oracle ORDS 18.4](http://download.oracle.com/otn/java/ords/ords-18.4.0.354.1002.zip)
+* [Oracle SQLcl 18.4](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.4.0.007.1818.zip)
+* [Apache Tomcat 8.5.37](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz)
+* [Java JDK 8u201 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
-* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.19.2.zip)
+* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.20.5.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**

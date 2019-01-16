@@ -15,10 +15,12 @@ java -jar ords.war configdir $CURR_DIR
 java -jar ords.war install simple
 
 # tune some ORDS default settings
-sed -i.bak 's/jdbc.InitialLimit\">3</jdbc.InitialLimit\">6</g' defaults.xml
-sed -i.bak 's/jdbc.MaxConnectionReuseCount\">1000</jdbc.MaxConnectionReuseCount\">10000</g' defaults.xml
-sed -i.bak 's/jdbc.MaxLimit\">10</jdbc.MaxLimit\">40\</g' defaults.xml
-sed -i.bak 's/jdbc.MinLimit\">1</jdbc.MinLimit\">6\</g' defaults.xml
+sed -i -E '/<\/properties>/d' defaults.xml
+echo '<entry key="jdbc.InitialLimit">6</entry>' >> defaults.xml
+echo '<entry key="jdbc.MaxConnectionReuseCount">10000</entry>' >> defaults.xml
+echo '<entry key="jdbc.MaxLimit">40</entry>' >> defaults.xml
+echo '<entry key="jdbc.MinLimit">6</entry>' >> defaults.xml
+echo '</properties>' >> defaults.xml
 chmod 777 defaults.xml
 
 cp -rf ${ORDS_HOME}/ords.war ${TOMCAT_HOME}/webapps/

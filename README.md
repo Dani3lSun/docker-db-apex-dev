@@ -16,7 +16,7 @@ This Docker Image contains the following:
 * Java JDK 8u201
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
-* APEX Office Print 3.x (Cloud Package)
+* APEX Office Print 19.x (Cloud Package)
 * Swagger-UI 3.x
 
 ## Installation
@@ -47,7 +47,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Java JDK 8u201 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
-* [APEX Office Print 3.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
+* [APEX Office Print 19.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.20.5.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
 

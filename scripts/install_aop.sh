@@ -33,16 +33,15 @@ aop_create_workspace(){
 aop_install_db(){
     echo "Installing AOP"
 
-    sed -i -E 's:aop_sample_db_obj:aop_sample3_db_obj:g' install.sql
-
-    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_db_sample_obj
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install
+    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @aop_db_sample_obj
+    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @aop_db_sample_pkg
 }
 
 aop_install_apex(){
     echo "Creating AOP APEX Application"
 
-	APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
+    APEX_SCHEMA=`sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 SET PAGESIZE 0 FEEDBACK OFF VERIFY OFF HEADING OFF ECHO OFF
 SELECT ao.owner FROM all_objects ao WHERE ao.object_name = 'WWV_FLOW' AND ao.object_type = 'PACKAGE' AND ao.owner LIKE 'APEX_%';
 EXIT;
@@ -56,14 +55,17 @@ EOF`
     echo "end;" >> install_aop_app.sql
     echo "/" >> install_aop_app.sql
     if [ "$APEX_SCHEMA" = "APEX_050000" ]; then
-      echo "Install AOP Sample App for APEX 5.0.x"
-      echo "@aop_sample3_apex_app_50.sql" >> install_aop_app.sql
+        echo "Install AOP Sample App for APEX 5.0.x"
+        echo "@@v5.0/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_050100" ]; then
-      echo "Install AOP Sample App for APEX 5.1.x"
-      echo "@aop_sample3_apex_app_51.sql" >> install_aop_app.sql
+        echo "Install AOP Sample App for APEX 5.1.x"
+        echo "@@v5.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_180100" ]; then
-      echo "Install AOP Sample App for APEX 5.1.x / 18.1.x"
-      echo "@aop_sample3_apex_app_51.sql" >> install_aop_app.sql
+        echo "Install AOP Sample App for APEX 18.x"
+        echo "@@v18.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_180200" ]; then
+        echo "Install AOP Sample App for APEX 18.x"
+        echo "@@v18.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app
@@ -73,8 +75,10 @@ EOF`
 aop_public_grants(){
     echo "Creating AOP Public Grants."
 
-    echo "grant execute on aop.aop_api3_pkg to PUBLIC;" > create_aop_public_grants.sql
-    echo "grant execute on aop.aop_plsql3_pkg to PUBLIC;" >> create_aop_public_grants.sql
+    echo "grant execute on aop.aop_api19_pkg to PUBLIC;" > create_aop_public_grants.sql
+    echo "grant execute on aop.aop_convert19_pkg to PUBLIC;" >> create_aop_public_grants.sql
+    echo "grant execute on aop.aop_plsql19_pkg to PUBLIC;" >> create_aop_public_grants.sql
+    echo "grant execute on aop.aop_settings19_pkg to PUBLIC;" >> create_aop_public_grants.sql
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @create_aop_public_grants
 }
@@ -82,8 +86,10 @@ aop_public_grants(){
 aop_public_synonyms(){
     echo "Creating AOP Public Synonyms."
 
-    echo "create or replace public synonym aop_api3_pkg for aop.aop_api3_pkg;" > create_aop_public_synonyms.sql
-    echo "create or replace public synonym aop_plsql3_pkg for aop.aop_plsql3_pkg;" >> create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_api19_pkg for aop.aop_api19_pkg;" > create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_convert19_pkg for aop.aop_convert19_pkg;" >> create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_plsql19_pkg for aop.aop_plsql19_pkg;" >> create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_settings19_pkg for aop.aop_settings19_pkg;" >> create_aop_public_synonyms.sql
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA @create_aop_public_synonyms
 }
@@ -106,7 +112,7 @@ aop_install_db
 aop_public_grants
 aop_public_synonyms
 
-cd /files/aop/v*/app
+cd /files/aop/v*/apex
 aop_install_apex
 
 cd /

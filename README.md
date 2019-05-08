@@ -43,7 +43,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle APEX 18.2](http://download.oracle.com/otn/java/appexpress/apex_18.2.zip)
 * [Oracle ORDS 18.4](http://download.oracle.com/otn/java/ords/ords-18.4.0.354.1002.zip)
 * [Oracle SQLcl 18.4](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-18.4.0.007.1818.zip)
-* [Apache Tomcat 8.5.37](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz)
+* [Apache Tomcat 8.5.37](https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz)
 * [Java JDK 8u201 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)

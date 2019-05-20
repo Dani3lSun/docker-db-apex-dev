@@ -15,11 +15,15 @@ echo "SERVICE_NAME: ${SERVICE_NAME}"
 echo "ORACLE_BASE: ${ORACLE_BASE}"
 echo "ORACLE_HOME12: ${ORACLE_HOME12}"
 echo "ORACLE_HOME18: ${ORACLE_HOME18}"
+echo "ORACLE_HOME19: ${ORACLE_HOME19}"
 if [ ${DB_INSTALL_VERSION} == "12" ]; then
     export ORACLE_HOME=${ORACLE_HOME12}
 fi
 if [ ${DB_INSTALL_VERSION} == "18" ]; then
     export ORACLE_HOME=${ORACLE_HOME18}
+fi
+if [ ${DB_INSTALL_VERSION} == "19" ]; then
+    export ORACLE_HOME=${ORACLE_HOME19}
 fi
 echo "ORACLE_HOME: ${ORACLE_HOME}"
 echo "ORACLE_INVENTORY: ${ORACLE_INVENTORY}"
@@ -41,12 +45,17 @@ echo "Image Setup......................................."
 ./scripts/image_setup.sh
 #
 echo "--------------------------------------------------"
-echo "Installing ORACLE Database EE......................"
 if [ ${DB_INSTALL_VERSION} == "12" ]; then
+    echo "Installing ORACLE Database 12 EE......................"
     ./scripts/install_oracle12ee.sh
 fi
 if [ ${DB_INSTALL_VERSION} == "18" ]; then
+    echo "Installing ORACLE Database 18 EE......................"
     ./scripts/install_oracle18ee.sh
+fi
+if [ ${DB_INSTALL_VERSION} == "19" ]; then
+    echo "Installing ORACLE Database 19 EE......................"
+    ./scripts/install_oracle19ee.sh
 fi
 #
 echo "--------------------------------------------------"

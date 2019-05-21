@@ -25,7 +25,8 @@ chmod a+x ${TOMCAT_HOME}/bin/setenv.sh
 
 # fix some tomcat settings
 echo 'tomcat.util.http.parser.HttpParser.requestTargetAllow=|' >> ${TOMCAT_HOME}/conf/catalina.properties
-sed -i -E 's/127\\.\\d+\\.\\d+\\.\\d+|::1|0:0:0:0:0:0:0:1/.*/g' ${TOMCAT_HOME}/webapps/manager/META-INF/context.xml
+sed -i -E 's/(allow=").*(")/allow=".*"/g' ${TOMCAT_HOME}/webapps/manager/META-INF/context.xml
+sed -i -E 's/(allow=").*(")/allow=".*"/g' ${TOMCAT_HOME}/webapps/host-manager/META-INF/context.xml
 
 # add to path
 echo 'export CATALINA_HOME="'${TOMCAT_HOME}'"' > ${TOMCAT_HOME}/.profile

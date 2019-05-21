@@ -12,7 +12,7 @@ This Docker Image contains the following:
 * Oracle APEX 19.1
 * Oracle ORDS 19.1
 * Oracle SQLcl 19.1
-* Apache Tomcat 8.5.37
+* Apache Tomcat 8.5.41
 * Java JDK 8u211
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1

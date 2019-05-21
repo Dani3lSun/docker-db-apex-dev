@@ -50,7 +50,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 19.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.22.1.zip)
-* [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64)
+* [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
 

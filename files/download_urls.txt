@@ -26,7 +26,7 @@ http://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.1.0.094.1619.zip
 https://github.com/swagger-api/swagger-ui/archive/v3.22.1.zip
 
 # GOSU (Docker SU Fix)
-https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64
+https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64
 
 # OraOpenSource Logger
 https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip

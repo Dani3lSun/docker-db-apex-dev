@@ -71,6 +71,10 @@ if [ ! -f /files/db_install_18.rsp ]; then
     echo "/files/db_install_18.rsp not found!"
     exit 1
 fi
+if [ ! -f /files/db_install_19.rsp ]; then
+    echo "/files/db_install_19.rsp not found!"
+    exit 1
+fi
 if [ ! -f /files/ords_params.properties ]; then
     echo "/files/ords_params.properties not found!"
     exit 1

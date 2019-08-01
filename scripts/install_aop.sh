@@ -7,7 +7,7 @@ aop_create_user(){
     echo "/" >> create_user_custom.sql
     echo "alter user AOP quota unlimited on USERS" >> create_user_custom.sql
     echo "/" >> create_user_custom.sql
-    echo "grant connect,create view, create job, create table, create sequence, create trigger, create procedure, create any context to AOP" >> create_user_custom.sql
+    echo "grant connect, create cluster, create dimension, create indextype, create job, create materialized view, create operator, create procedure, create sequence, create session, create synonym, create table, create trigger, create type, create view to AOP;" >> create_user_custom.sql
     echo "/" >> create_user_custom.sql
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA @create_user_custom
@@ -62,13 +62,13 @@ EOF`
         echo "@@v5.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_180100" ]; then
         echo "Install AOP Sample App for APEX 18.x"
-        echo "@@v18.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@v18.x_19.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_180200" ]; then
         echo "Install AOP Sample App for APEX 18.x"
-        echo "@@v18.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@v18.x_19.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_190100" ]; then
         echo "Install AOP Sample App for APEX 18.x"
-        echo "@@v18.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@v18.x_19.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app

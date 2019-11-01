@@ -1,5 +1,5 @@
 # Tomcat
-http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
+http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz
 
 # Oracle JDK 8 (Linux x64 tar.gz)
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
@@ -14,7 +14,7 @@ https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.
 https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.zip
 
 # Oracle APEX
-http://download.oracle.com/otn/java/appexpress/apex_19.1.zip
+http://download.oracle.com/otn/java/appexpress/apex_19.2.zip
 
 # Oracle ORDS
 http://download.oracle.com/otn/java/ords/ords-19.2.0.199.1647.zip
@@ -23,7 +23,7 @@ http://download.oracle.com/otn/java/ords/ords-19.2.0.199.1647.zip
 http://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.2.1.206.1649.zip
 
 # Swagger-UI
-https://github.com/swagger-api/swagger-ui/archive/v3.23.3.zip
+https://github.com/swagger-api/swagger-ui/archive/v3.24.0.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64

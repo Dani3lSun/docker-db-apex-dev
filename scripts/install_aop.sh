@@ -69,6 +69,9 @@ EOF`
     elif [ "$APEX_SCHEMA" = "APEX_190100" ]; then
         echo "Install AOP Sample App for APEX 18.x"
         echo "@@v18.x_19.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_190200" ]; then
+        echo "Install AOP Sample App for APEX 18.x"
+        echo "@@v18.x_19.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app

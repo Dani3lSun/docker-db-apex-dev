@@ -93,7 +93,7 @@ if ! ls /files/gosu-amd64 1> /dev/null 2>&1; then
     echo "GOSU not found!"
     exit 1
 fi
-if ! ls /files/jdk-8*.tar.gz 1> /dev/null 2>&1; then
+if ! ls /files/OpenJDK11U-jdk_*.tar.gz 1> /dev/null 2>&1; then
     echo "Java not found!"
     exit 1
 fi

@@ -13,7 +13,7 @@ This Docker Image contains the following:
 * Oracle ORDS 19.2
 * Oracle SQLcl 19.2
 * Apache Tomcat 8.5.47
-* Java JDK 8u231
+* AdoptOpenJDK 11.0.5+10
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 19.x (Cloud Package)
@@ -45,7 +45,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle ORDS 19.2](http://download.oracle.com/otn/java/ords/ords-19.2.0.199.1647.zip)
 * [Oracle SQLcl 19.2](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.2.1.206.1649.zip)
 * [Apache Tomcat 8.5.47](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz)
-* [Java JDK 8u231 - Linux x64 tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [AdoptOpenJDK 11.0.5+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.5_10.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 19.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
@@ -72,7 +72,7 @@ DB_INSTALL_VERSION=19 # Database version to install, 12 or 18 or 19
 ORACLE_BASE=/u01/app/oracle # Path to ORACLE_BASE Directory
 ORACLE_HOME12=/u01/app/oracle/product/12.2.0.1/dbhome # Path to ORACLE_HOME Directory of 12.2 database
 ORACLE_HOME18=/u01/app/oracle/product/18.0.0/dbhome # Path to ORACLE_HOME Directory of 18.3 database
-ORACLE_HOME19=/u01/app/oracle/product/19.0.0/dbhome # Path to ORACLE_HOME Directory of 18.3 database
+ORACLE_HOME19=/u01/app/oracle/product/19.0.0/dbhome # Path to ORACLE_HOME Directory of 19.3 database
 ORACLE_INVENTORY=/u01/app/oraInventory # Path to ORACLE_INVENTORY Directory
 PASS=oracle # Password of all Database Users (like SYS, APEX_PUBLIC_USER ...), Tomcat Admin and SSH
 ORDS_HOME=/u01/ords # Path to ORDS_HOME Directory

@@ -1,8 +1,8 @@
 #!/bin/bash
 cd /files
 
-tar -xzf jdk-8*.tar.gz
-mv jdk1.8* ${JAVA_HOME}
+tar -xzf OpenJDK11U-jdk_*.tar.gz
+mv jdk-* ${JAVA_HOME}
 
 echo 'JAVA_HOME='${JAVA_HOME} >> /etc/profile
 echo 'PATH=$PATH:$HOME/bin:$JAVA_HOME/bin' >> /etc/profile

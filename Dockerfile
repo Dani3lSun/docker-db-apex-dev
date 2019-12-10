@@ -1,4 +1,4 @@
-FROM oraclelinux:7.6
+FROM oraclelinux:7.7
 
 MAINTAINER Daniel Hochleitner <dhochleitner@posteo.de>
 
@@ -9,6 +9,7 @@ ENV INSTALL_APEX=true \
     INSTALL_OOSUTILS=true \
     INSTALL_AOP=true \
     INSTALL_SWAGGER=true \
+    INSTALL_CA_CERTS_WALLET=true \
     DBCA_TOTAL_MEMORY=2048 \
     ORACLE_SID=orcl \
     SERVICE_NAME=orcl \

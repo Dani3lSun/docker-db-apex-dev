@@ -8,6 +8,7 @@ echo "INSTALL_LOGGER: ${INSTALL_LOGGER}"
 echo "INSTALL_OOSUTILS: ${INSTALL_OOSUTILS}"
 echo "INSTALL_AOP: ${INSTALL_AOP}"
 echo "INSTALL_SWAGGER: ${INSTALL_SWAGGER}"
+echo "INSTALL_CA_CERTS_WALLET: ${INSTALL_CA_CERTS_WALLET}"
 echo "DB_INSTALL_VERSION: ${DB_INSTALL_VERSION}"
 echo "DBCA_TOTAL_MEMORY: ${DBCA_TOTAL_MEMORY}"
 echo "ORACLE_SID: ${ORACLE_SID}"
@@ -83,10 +84,19 @@ if [ ${INSTALL_APEX} == "true" ]; then
     ./scripts/install_ords.sh
     #
     if [ ${INSTALL_AOP} == "true" ]; then
+        echo "--------------------------------------------------"
+        echo "Installing AOP...................................."
         ./scripts/install_aop.sh
     fi
     if [ ${INSTALL_SWAGGER} == "true" ]; then
+        echo "--------------------------------------------------"
+        echo "Installing Swagger................................"
         ./scripts/install_swagger.sh
+    fi
+    if [ ${INSTALL_CA_CERTS_WALLET} == "true" ]; then
+        echo "--------------------------------------------------"
+        echo "Installing APEX CA SSL Wallet....................."
+        ./scripts/install_ca_wallet.sh
     fi
 fi
 #

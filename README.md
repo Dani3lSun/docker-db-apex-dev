@@ -12,7 +12,7 @@ This Docker Image contains the following:
 * Oracle APEX 19.2
 * Oracle ORDS 19.2
 * Oracle SQLcl 19.2
-* Apache Tomcat 8.5.47
+* Apache Tomcat 8.5.49
 * AdoptOpenJDK 11.0.5+10
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
@@ -44,7 +44,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle APEX 19.2](http://download.oracle.com/otn/java/appexpress/apex_19.2.zip)
 * [Oracle ORDS 19.2](http://download.oracle.com/otn/java/ords/ords-19.2.0.199.1647.zip)
 * [Oracle SQLcl 19.2](http://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.2.1.206.1649.zip)
-* [Apache Tomcat 8.5.47](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz)
+* [Apache Tomcat 8.5.49](http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.49/bin/apache-tomcat-8.5.49.tar.gz)
 * [AdoptOpenJDK 11.0.5+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.5_10.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
@@ -65,6 +65,7 @@ INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
 INSTALL_OOSUTILS=true # Whether install OraOpenSource OOS Utils or Not
 INSTALL_AOP=true # Whether install APEX Office Print (AOP) or Not (Cloud Package)
 INSTALL_SWAGGER=true # Whether install Swagger-UI for REST docs or Not
+INSTALL_CA_CERTS_WALLET=true # Whether to install an instance wide APEX SSL Wallet containing all valid public root CA certificates
 DBCA_TOTAL_MEMORY=2048 # Memory Size of Database
 ORACLE_SID=orcl # SID of Oracle Database
 SERVICE_NAME=orcl # SERVICE_NAME of Oracle Database

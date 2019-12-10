@@ -21,3 +21,4 @@ fi
 # update YUM
 yum clean all
 yum update -y
+yum install -y openssl

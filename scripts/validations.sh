@@ -1,6 +1,10 @@
 #!/bin/bash
 
 echo "......Checking Scripts......"
+if [ ! -f /scripts/create_ca_wallet.sh ]; then
+    echo "/scripts/create_ca_wallet.sh not found!"
+    exit 1
+fi
 if [ ! -f /scripts/entrypoint.sh ]; then
     echo "/scripts/entrypoint.sh not found!"
     exit 1
@@ -15,6 +19,10 @@ if [ ! -f /scripts/install_aop.sh ]; then
 fi
 if [ ! -f /scripts/install_apex.sh ]; then
     echo "/scripts/install_apex.sh not found!"
+    exit 1
+fi
+if [ ! -f /scripts/install_ca_wallet.sh ]; then
+    echo "/scripts/install_ca_wallet.sh not found!"
     exit 1
 fi
 if [ ! -f /scripts/install_logger.sh ]; then

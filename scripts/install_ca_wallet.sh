@@ -17,7 +17,7 @@ set_apex_wallet_and_pwd() {
 
   echo "begin" >set_apex_wallet.sql
   echo "  apex_instance_admin.set_parameter('WALLET_PATH','file:/home/oracle/wallet');" >>set_apex_wallet.sql
-  echo "  apex_instance_admin.set_parameter('WALLET_PWD','${WALLET_PWD}');" >>set_apex_wallet.sql >>set_apex_wallet.sql
+  echo "  apex_instance_admin.set_parameter('WALLET_PWD','${WALLET_PWD}');" >>set_apex_wallet.sql
   echo "  commit;" >>set_apex_wallet.sql
   echo "end;" >>set_apex_wallet.sql
   echo "/" >>set_apex_wallet.sql

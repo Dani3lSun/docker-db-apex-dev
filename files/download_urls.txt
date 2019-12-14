@@ -1,5 +1,5 @@
 # Tomcat
-http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.49/bin/apache-tomcat-8.5.49.tar.gz
+http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
 
 # AdoptOpenJDK 11 (Linux x64 tar.gz)
 https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.5_10.tar.gz
@@ -23,7 +23,7 @@ http://download.oracle.com/otn/java/ords/ords-19.2.0.199.1647.zip
 http://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.2.1.206.1649.zip
 
 # Swagger-UI
-https://github.com/swagger-api/swagger-ui/archive/v3.24.0.zip
+https://github.com/swagger-api/swagger-ui/archive/v3.24.3.zip
 
 # GOSU (Docker SU Fix)
 https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64

@@ -9,6 +9,9 @@ logger_create_tablespace(){
     if [ ${DB_INSTALL_VERSION} == "18" ]; then
         DATAFILE_SID=${ORACLE_SID^^}
     fi
+    if [ ${DB_INSTALL_VERSION} == "19" ]; then
+        DATAFILE_SID=${ORACLE_SID^^}
+    fi
 
     ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 		CREATE TABLESPACE LOGGER_TS DATAFILE '${ORACLE_BASE}/oradata/${DATAFILE_SID}/logger01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M;

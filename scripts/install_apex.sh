@@ -31,6 +31,9 @@ apex_create_tablespace(){
     if [ ${DB_INSTALL_VERSION} == "18" ]; then
         DATAFILE_SID=${ORACLE_SID^^}
     fi
+    if [ ${DB_INSTALL_VERSION} == "19" ]; then
+        DATAFILE_SID=${ORACLE_SID^^}
+    fi
 
     ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA <<EOF
 		CREATE TABLESPACE apex DATAFILE '${ORACLE_BASE}/oradata/${DATAFILE_SID}/apex01.dbf' SIZE 100M AUTOEXTEND ON NEXT 10M;

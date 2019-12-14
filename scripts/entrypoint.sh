@@ -21,6 +21,9 @@ fi
 if [ ${DB_INSTALL_VERSION} == "18" ]; then
     export ORACLE_HOME=${ORACLE_HOME18}
 fi
+if [ ${DB_INSTALL_VERSION} == "19" ]; then
+    export ORACLE_HOME=${ORACLE_HOME19}
+fi
 gosu oracle bash -c "${ORACLE_HOME}/bin/lsnrctl start"
 gosu oracle bash -c 'echo startup\; | ${ORACLE_HOME}/bin/sqlplus -s -l / as sysdba'
 # tomcat

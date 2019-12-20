@@ -20,6 +20,9 @@ echo '<entry key="jdbc.InitialLimit">6</entry>' >> defaults.xml
 echo '<entry key="jdbc.MaxConnectionReuseCount">10000</entry>' >> defaults.xml
 echo '<entry key="jdbc.MaxLimit">40</entry>' >> defaults.xml
 echo '<entry key="jdbc.MinLimit">6</entry>' >> defaults.xml
+# sqldev web: ords >= 19.4
+echo '<entry key="feature.sdw">true</entry>' >> defaults.xml
+echo '<entry key="restEnabledSql.active">true</entry>' >> defaults.xml
 echo '</properties>' >> defaults.xml
 chmod 777 defaults.xml
 

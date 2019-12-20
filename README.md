@@ -10,7 +10,7 @@ This Docker Image contains the following:
 * Oracle Linux 7.7
 * Oracle Database 12.2 / 18.3 / 19.3 Enterprise Edition with non-CDB architecture
 * Oracle APEX 19.2
-* Oracle ORDS 19.2
+* Oracle ORDS 19.4
 * Oracle SQLcl 19.2
 * Apache Tomcat 8.5.50
 * AdoptOpenJDK 11.0.5+10
@@ -42,7 +42,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
 * [Oracle Database 19.3 EE](https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.zip)
 * [Oracle APEX 19.2](https://download.oracle.com/otn/java/appexpress/apex_19.2.zip)
-* [Oracle ORDS 19.2](https://download.oracle.com/otn/java/ords/ords-19.4.0.352.1226.zip)
+* [Oracle ORDS 19.4](https://download.oracle.com/otn/java/ords/ords-19.4.0.352.1226.zip)
 * [Oracle SQLcl 19.2](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.2.1.206.1649.zip)
 * [Apache Tomcat 8.5.50](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz)
 * [AdoptOpenJDK 11.0.5+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.5_10.tar.gz)

@@ -61,6 +61,7 @@ You can change some Environment Variables directly in the [Dockerfile](https://g
 ```bash
 INSTALL_APEX=true # Whether install Oracle APEX (Oracle ORDS / Apache Tomcat) or Not
 INSTALL_SQLCL=true # Whether install Oracle SQLCL or Not
+INSTALL_SQLDEVWEB=true # Whether to enable SQL Developer Web which is part of ORDS >= 19.4
 INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
 INSTALL_OOSUTILS=true # Whether install OraOpenSource OOS Utils or Not
 INSTALL_AOP=true # Whether install APEX Office Print (AOP) or Not (Cloud Package)
@@ -131,13 +132,24 @@ Workspace | INTERNAL
 User | ADMIN
 Password | OrclAPEX1999!
 
-*If APEX Office Print is installed*
+*If APEX Office Print is installed (INSTALL_AOP=true)*
 
 Property | Value
 -------- | -----
 Workspace | AOP
 User | ADMIN
 Password | OrclAPEX1999!
+
+### SQL Developer Web
+
+*If SQL Developer Web is enabled (INSTALL_SQLDEVWEB=true)*
+
+[http://localhost:8080/ords/sql-developer](http://localhost:8080/ords/sql-developer)
+
+Property | Value
+-------- | -----
+User | SDW_ADMIN
+Password | oracle
 
 ### Database Connections
 
@@ -162,6 +174,7 @@ apex\_public\_user | oracle
 logger\_user | oracle
 oosutils\_user | oracle
 aop | oracle
+sdw\_admin | oracle
 
 Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/orcl```
 

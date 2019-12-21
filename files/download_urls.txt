@@ -20,7 +20,7 @@ https://download.oracle.com/otn/java/appexpress/apex_19.2.zip
 https://download.oracle.com/otn/java/ords/ords-19.4.0.352.1226.zip
 
 # Oracle SQLcl
-https://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.2.1.206.1649.zip
+https://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.4.0.354.0937.zip
 
 # Swagger-UI
 https://github.com/swagger-api/swagger-ui/archive/v3.24.3.zip

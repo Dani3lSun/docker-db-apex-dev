@@ -45,7 +45,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle ORDS 19.4](https://download.oracle.com/otn/java/ords/ords-19.4.0.352.1226.zip)
 * [Oracle SQLcl 19.4](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.4.0.354.0937.zip)
 * [Apache Tomcat 8.5.50](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz)
-* [AdoptOpenJDK 11.0.5+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.5%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.5_10.tar.gz)
+* [AdoptOpenJDK 11.0.6+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.6_10.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 19.x (Login and download Cloud Package)](https://www.apexofficeprint.com)

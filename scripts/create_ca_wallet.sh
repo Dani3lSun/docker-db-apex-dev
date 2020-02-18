@@ -29,7 +29,7 @@ create_folders() {
 fetch_scripts() {
     echo ""
     echo "**** Fetching script & certificates data from mozilla ****"
-    curl -O https://raw.githubusercontent.com/alpinelinux/ca-certificates/master/certdata2pem.py
+    curl -O https://raw.githubusercontent.com/alpinelinux/ca-certificates/3184fe80e403b9dc6d5fe3b7ebcd9d375363e2e4/certdata2pem.py
     curl -O https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt
     curl -O https://git.launchpad.net/ubuntu/+source/ca-certificates/plain/mozilla/blacklist.txt
     chmod +x certdata2pem.py

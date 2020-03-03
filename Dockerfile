@@ -9,6 +9,7 @@ ENV INSTALL_APEX=true \
     INSTALL_LOGGER=true \
     INSTALL_OOSUTILS=true \
     INSTALL_AOP=true \
+    INSTALL_AME=true \
     INSTALL_SWAGGER=true \
     INSTALL_CA_CERTS_WALLET=true \
     DBCA_TOTAL_MEMORY=2048 \

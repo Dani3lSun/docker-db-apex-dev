@@ -8,6 +8,7 @@ echo "INSTALL_SQLDEVWEB: ${INSTALL_SQLDEVWEB}"
 echo "INSTALL_LOGGER: ${INSTALL_LOGGER}"
 echo "INSTALL_OOSUTILS: ${INSTALL_OOSUTILS}"
 echo "INSTALL_AOP: ${INSTALL_AOP}"
+echo "INSTALL_AME: ${INSTALL_AME}"
 echo "INSTALL_SWAGGER: ${INSTALL_SWAGGER}"
 echo "INSTALL_CA_CERTS_WALLET: ${INSTALL_CA_CERTS_WALLET}"
 echo "DB_INSTALL_VERSION: ${DB_INSTALL_VERSION}"
@@ -88,6 +89,11 @@ if [ ${INSTALL_APEX} == "true" ]; then
         echo "--------------------------------------------------"
         echo "Installing AOP...................................."
         ./scripts/install_aop.sh
+    fi
+    if [ ${INSTALL_AME} == "true" ]; then
+        echo "--------------------------------------------------"
+        echo "Installing AME...................................."
+        ./scripts/install_ame.sh
     fi
     if [ ${INSTALL_SWAGGER} == "true" ]; then
         echo "--------------------------------------------------"

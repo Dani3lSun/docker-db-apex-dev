@@ -17,6 +17,7 @@ This Docker Image contains the following:
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 19.x (Cloud Package)
+* APEX Media Extension 20.x (Cloud Package)
 * Swagger-UI 3.x
 
 ## Installation
@@ -49,6 +50,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 19.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
+* [APEX Media Extension 20.x (Login and download Cloud Package)](https://www.apexmediaextension.com)
 * [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.24.3.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64)
 
@@ -65,6 +67,7 @@ INSTALL_SQLDEVWEB=true # Whether to enable SQL Developer Web which is part of OR
 INSTALL_LOGGER=true # Whether install OraOpenSource Logger or Not
 INSTALL_OOSUTILS=true # Whether install OraOpenSource OOS Utils or Not
 INSTALL_AOP=true # Whether install APEX Office Print (AOP) or Not (Cloud Package)
+INSTALL_AME=true # Whether install APEX Media Extension (AME) or Not (Cloud Package)
 INSTALL_SWAGGER=true # Whether install Swagger-UI for REST docs or Not
 INSTALL_CA_CERTS_WALLET=true # Whether to install an instance wide APEX SSL Wallet containing all valid public root CA certificates
 DBCA_TOTAL_MEMORY=2048 # Memory Size of Database

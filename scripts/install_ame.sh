@@ -66,6 +66,9 @@ EOF`
     elif [ "$APEX_SCHEMA" = "APEX_190200" ]; then
         echo "Install AME Sample App for APEX 19.2"
         echo "@@ame_sample_apex_app.sql" >> install_ame_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_200100" ]; then
+        echo "Install AME Sample App for APEX 20.1"
+        echo "@@ame_sample_apex_app.sql" >> install_ame_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l ame/${PASS} @install_ame_app

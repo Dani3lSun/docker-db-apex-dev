@@ -56,22 +56,25 @@ EOF`
     echo "/" >> install_aop_app.sql
     if [ "$APEX_SCHEMA" = "APEX_050000" ]; then
         echo "Install AOP Sample App for APEX 5.0.x"
-        echo "@@v5.0/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_5.0/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_050100" ]; then
         echo "Install AOP Sample App for APEX 5.1.x"
-        echo "@@v5.1/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_5.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_180100" ]; then
         echo "Install AOP Sample App for APEX 18.x - 19.1"
-        echo "@@v18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_180200" ]; then
         echo "Install AOP Sample App for APEX 18.x - 19.1"
-        echo "@@v18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_190100" ]; then
         echo "Install AOP Sample App for APEX 18.x - 19.1"
-        echo "@@v18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_190200" ]; then
         echo "Install AOP Sample App for APEX 19.2"
-        echo "@@v19.2/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_19.2_20.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_200100" ]; then
+        echo "Install AOP Sample App for APEX 20.1"
+        echo "@@apex_version_19.2_20.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app
@@ -81,10 +84,10 @@ EOF`
 aop_public_grants(){
     echo "Creating AOP Public Grants."
 
-    echo "grant execute on aop.aop_api19_pkg to PUBLIC;" > create_aop_public_grants.sql
-    echo "grant execute on aop.aop_convert19_pkg to PUBLIC;" >> create_aop_public_grants.sql
-    echo "grant execute on aop.aop_plsql19_pkg to PUBLIC;" >> create_aop_public_grants.sql
-    echo "grant execute on aop.aop_settings19_pkg to PUBLIC;" >> create_aop_public_grants.sql
+    echo "grant execute on aop.aop_api20_pkg to PUBLIC;" > create_aop_public_grants.sql
+    echo "grant execute on aop.aop_convert20_pkg to PUBLIC;" >> create_aop_public_grants.sql
+    echo "grant execute on aop.aop_plsql20_pkg to PUBLIC;" >> create_aop_public_grants.sql
+    echo "grant execute on aop.aop_settings20_pkg to PUBLIC;" >> create_aop_public_grants.sql
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @create_aop_public_grants
 }
@@ -92,10 +95,10 @@ aop_public_grants(){
 aop_public_synonyms(){
     echo "Creating AOP Public Synonyms."
 
-    echo "create or replace public synonym aop_api19_pkg for aop.aop_api19_pkg;" > create_aop_public_synonyms.sql
-    echo "create or replace public synonym aop_convert19_pkg for aop.aop_convert19_pkg;" >> create_aop_public_synonyms.sql
-    echo "create or replace public synonym aop_plsql19_pkg for aop.aop_plsql19_pkg;" >> create_aop_public_synonyms.sql
-    echo "create or replace public synonym aop_settings19_pkg for aop.aop_settings19_pkg;" >> create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_api20_pkg for aop.aop_api20_pkg;" > create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_convert20_pkg for aop.aop_convert20_pkg;" >> create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_plsql20_pkg for aop.aop_plsql20_pkg;" >> create_aop_public_synonyms.sql
+    echo "create or replace public synonym aop_settings20_pkg for aop.aop_settings20_pkg;" >> create_aop_public_synonyms.sql
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA @create_aop_public_synonyms
 }

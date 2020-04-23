@@ -13,6 +13,10 @@ if [ ! -f /scripts/image_setup.sh ]; then
     echo "/scripts/image_setup.sh not found!"
     exit 1
 fi
+if [ ! -f /scripts/install_ame.sh ]; then
+    echo "/scripts/install_ame.sh not found!"
+    exit 1
+fi
 if [ ! -f /scripts/install_aop.sh ]; then
     echo "/scripts/install_aop.sh not found!"
     exit 1
@@ -157,6 +161,12 @@ if [ ${INSTALL_APEX} == "true" ]; then
     if [ ${INSTALL_AOP} == "true" ]; then
         if ! ls /files/aop_cloud_v*.zip 1> /dev/null 2>&1; then
             echo "APEX Office Print not found!"
+            exit 1
+        fi
+    fi
+    if [ ${INSTALL_AME} == "true" ]; then
+        if ! ls /files/ame_cloud_v*.zip 1> /dev/null 2>&1; then
+            echo "APEX Media Extension not found!"
             exit 1
         fi
     fi

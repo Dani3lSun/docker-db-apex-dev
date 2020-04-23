@@ -33,8 +33,7 @@ ame_create_workspace(){
 ame_install_db(){
     echo "Installing AME"
 
-    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l ame/${PASS} @ame_db_pkg.sql
-    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l ame/${PASS} @ame_db_native_compile_pkg.sql
+    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l ame/${PASS} @install
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l ame/${PASS} @ame_db_sample_obj
 }
 

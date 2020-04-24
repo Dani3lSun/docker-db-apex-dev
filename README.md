@@ -177,6 +177,7 @@ apex\_public\_user | oracle
 logger\_user | oracle
 oosutils\_user | oracle
 aop | oracle
+ame | oracle
 sdw\_admin | oracle
 
 Use the following connect string to connect as SYSTEM via SQL*Plus or SQLcl: ```system/oracle@localhost/orcl```

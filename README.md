@@ -56,6 +56,8 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**
 
+*Note: You only need to download one Oracle Database version :) After that you will configure the version you downloaded by editing the Dockerfile*
+
 3. **Customize some settings to reflect your needs (optional)**
 
 You can change some Environment Variables directly in the [Dockerfile](https://github.com/Dani3lSun/docker-db-apex-dev/blob/master/Dockerfile):

@@ -10,9 +10,9 @@ This Docker Image contains the following:
 * Oracle Linux 7.7
 * Oracle Database 12.2 / 18.3 / 19.3 Enterprise Edition with non-CDB architecture
 * Oracle APEX 20.1
-* Oracle ORDS 19.4
+* Oracle ORDS 19.4.6
 * Oracle SQLcl 19.4
-* Apache Tomcat 8.5.54
+* Apache Tomcat 8.5.55
 * AdoptOpenJDK 11.0.7+10
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
@@ -43,15 +43,15 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
 * [Oracle Database 19.3 EE](https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.zip)
 * [Oracle APEX 20.1](https://download.oracle.com/otn/java/appexpress/apex_20.1.zip)
-* [Oracle ORDS 19.4](https://download.oracle.com/otn/java/ords/ords-19.4.0.352.1226.zip)
+* [Oracle ORDS 19.4.6](https://download.oracle.com/otn/java/ords/ords-19.4.6.142.1859.zip)
 * [Oracle SQLcl 19.4](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.4.0.354.0937.zip)
-* [Apache Tomcat 8.5.54](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz)
+* [Apache Tomcat 8.5.55](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.55/bin/apache-tomcat-8.5.55.tar.gz)
 * [AdoptOpenJDK 11.0.7+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 20.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [APEX Media Extension 20.x (Login and download Cloud Package)](https://www.apexmediaextension.com)
-* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.25.0.zip)
+* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.12/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**

@@ -1,4 +1,4 @@
-FROM oraclelinux:7.7
+FROM oraclelinux:7.9
 
 MAINTAINER Daniel Hochleitner <dhochleitner@posteo.de>
 

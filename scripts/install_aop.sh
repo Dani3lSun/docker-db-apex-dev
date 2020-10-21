@@ -71,10 +71,13 @@ EOF`
         echo "@@apex_version_18.x_19.1/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_190200" ]; then
         echo "Install AOP Sample App for APEX 19.2"
-        echo "@@apex_version_19.2_20.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_19.2/aop_sample_apex_app.sql" >> install_aop_app.sql
     elif [ "$APEX_SCHEMA" = "APEX_200100" ]; then
         echo "Install AOP Sample App for APEX 20.1"
-        echo "@@apex_version_19.2_20.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+        echo "@@apex_version_20.x/aop_sample_apex_app.sql" >> install_aop_app.sql
+    elif [ "$APEX_SCHEMA" = "APEX_200200" ]; then
+        echo "Install AOP Sample App for APEX 20.2"
+        echo "@@apex_version_20.x/aop_sample_apex_app.sql" >> install_aop_app.sql
     fi
 
     echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l aop/${PASS} @install_aop_app

@@ -7,13 +7,13 @@
 
 This Docker Image contains the following:
 
-* Oracle Linux 7.7
+* Oracle Linux 7.9
 * Oracle Database 12.2 / 18.3 / 19.3 Enterprise Edition with non-CDB architecture
-* Oracle APEX 20.1
-* Oracle ORDS 19.4.6
-* Oracle SQLcl 19.4
-* Apache Tomcat 8.5.55
-* AdoptOpenJDK 11.0.7+10
+* Oracle APEX 20.2
+* Oracle ORDS 20.2.1
+* Oracle SQLcl 20.2
+* Apache Tomcat 8.5.59
+* AdoptOpenJDK 11.0.8+10
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 20.x (Cloud Package)
@@ -42,16 +42,16 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle Database 12.2.0.1 EE](https://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip)
 * [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
 * [Oracle Database 19.3 EE](https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.zip)
-* [Oracle APEX 20.1](https://download.oracle.com/otn/java/appexpress/apex_20.1.zip)
-* [Oracle ORDS 19.4.6](https://download.oracle.com/otn/java/ords/ords-19.4.6.142.1859.zip)
-* [Oracle SQLcl 19.4](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-19.4.0.354.0937.zip)
-* [Apache Tomcat 8.5.55](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.55/bin/apache-tomcat-8.5.55.tar.gz)
-* [AdoptOpenJDK 11.0.7+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10.tar.gz)
+* [Oracle APEX 20.2](https://download.oracle.com/otn/java/appexpress/apex_20.2.zip)
+* [Oracle ORDS 20.2.1](https://download.oracle.com/otn/java/ords/ords-20.2.1.227.0350.zip)
+* [Oracle SQLcl 20.2](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-20.2.0.174.1557.zip)
+* [Apache Tomcat 8.5.59](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.tar.gz)
+* [AdoptOpenJDK 11.0.8+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.8_10.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 20.x (Login and download Cloud Package)](https://www.apexofficeprint.com)
 * [APEX Media Extension 20.x (Login and download Cloud Package)](https://www.apexmediaextension.com)
-* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip)
+* [Swagger-UI v3.x](https://github.com/swagger-api/swagger-ui/archive/v3.35.2.zip)
 * [GOSU - Docker SU Fix](https://github.com/tianon/gosu/releases/download/1.12/gosu-amd64)
 
 **Place all downloaded files in the** [files](https://github.com/Dani3lSun/docker-db-apex-dev/tree/master/files) **directory!**

@@ -56,6 +56,7 @@ echo '<entry key="jdbc.MinLimit">6</entry>' >>defaults.xml
 if [ ${INSTALL_SQLDEVWEB} == "true" ]; then
     echo '<entry key="feature.sdw">true</entry>' >>defaults.xml
     echo '<entry key="restEnabledSql.active">true</entry>' >>defaults.xml
+    echo '<entry key="database.api.enabled">true</entry>' >>defaults.xml
     echo '<entry key="security.verifySSL">false</entry>' >>defaults.xml
 fi
 echo '</properties>' >>defaults.xml

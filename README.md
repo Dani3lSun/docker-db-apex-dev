@@ -13,7 +13,7 @@ This Docker Image contains the following:
 * Oracle ORDS 20.2.1
 * Oracle SQLcl 20.2
 * Apache Tomcat 8.5.59
-* AdoptOpenJDK 11.0.8+10
+* AdoptOpenJDK 11.0.9+11
 * OraOpenSource Logger 3.1.1
 * OraOpenSource OOS Utils 1.0.1
 * APEX Office Print 20.x (Cloud Package)
@@ -46,7 +46,7 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle ORDS 20.2.1](https://download.oracle.com/otn/java/ords/ords-20.2.1.227.0350.zip)
 * [Oracle SQLcl 20.2](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-20.2.0.174.1557.zip)
 * [Apache Tomcat 8.5.59](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.tar.gz)
-* [AdoptOpenJDK 11.0.8+10 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.8_10.tar.gz)
+* [AdoptOpenJDK 11.0.9+11 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.9%2B11.1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.9_11.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)
 * [OraOpenSource OOS Utils 1.0.1](https://observant-message.glitch.me/oos-utils/latest/oos-utils-latest.zip)
 * [APEX Office Print 20.x (Login and download Cloud Package)](https://www.apexofficeprint.com)

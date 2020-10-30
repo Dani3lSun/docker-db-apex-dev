@@ -62,8 +62,14 @@ fi
 echo '</properties>' >>defaults.xml
 chmod 777 defaults.xml
 
+# copy files
 cp -rf ${ORDS_HOME}/ords.war ${TOMCAT_HOME}/webapps/
 cp -rf ${ORACLE_HOME}/apex/images ${TOMCAT_HOME}/webapps/i
+if [ ! -z "${APEX_PATCH_SET_BUNDLE_FILE}" ]; then
+    if ls /files/apexpatch/*/images 1> /dev/null 2>&1; then
+        cp -rf /files/apexpatch/*/images/* ${TOMCAT_HOME}/webapps/i/
+    fi
+fi
 
 # sqldev web: ords >= 19.4
 if [ ${INSTALL_SQLDEVWEB} == "true" ]; then

@@ -141,6 +141,14 @@ unzip_apex(){
     unzip /files/apex*.zip -d ${ORACLE_HOME}/
 }
 
+install_apex_patch(){
+    echo "Installing APEX Patch Set Bundle"
+    mkdir /files/apexpatch
+    unzip /files/${APEX_PATCH_SET_BUNDLE_FILE} -d /files/apexpatch/
+    cd /files/apexpatch/*
+    echo "EXIT" | ${ORACLE_HOME}/bin/sqlplus -s -l sys/${PASS} AS SYSDBA @catpatch.sql
+}
+
 echo "Installing APEX in DB: ${ORACLE_SID}"
 . /home/oracle/.bash_profile
 unzip_apex
@@ -152,5 +160,8 @@ apex_rest_config
 apex_allow_all_acl
 if [ ! -z "${APEX_ADDITIONAL_LANG}" ]; then
     apex_install_lang
+fi
+if [ ! -z "${APEX_PATCH_SET_BUNDLE_FILE}" ]; then
+    install_apex_patch
 fi
 cd /

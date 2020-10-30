@@ -176,6 +176,12 @@ if [ ${INSTALL_APEX} == "true" ]; then
             exit 1
         fi
     fi
+    if [ ! -z "${APEX_PATCH_SET_BUNDLE_FILE}" ]; then
+        if ! ls /files/${APEX_PATCH_SET_BUNDLE_FILE} 1> /dev/null 2>&1; then
+            echo "APEX Patch Set Bundle File not found!"
+            exit 1
+        fi
+    fi
 fi
 #
 echo "......Validations Done......"

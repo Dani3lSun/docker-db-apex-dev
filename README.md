@@ -87,7 +87,7 @@ JAVA_HOME=/opt/java # Path to JAVA_HOME Directory
 TOMCAT_HOME=/opt/tomcat # Path to TOMCAT_HOME Directory
 APEX_PASS=OrclAPEX1999! # Admin Password of Oracle APEX Web Login (Caution: Oracle APEX Password Policy)
 APEX_ADDITIONAL_LANG= # Additional Language of APEX, blank to only install English (e.g de, es, fr, it, ja, ko, pt-br, zh-cn, zh-tw)
-APEX_PATCH_SET_BUNDLE_FILE= # Additional file name of the APEX Patch Set Bundle zip file (e.g. p32006852_2020_Generic.zip)
+APEX_PATCH_SET_BUNDLE_FILE= # Additional file name of the APEX Patch Set Bundle zip file (e.g. p32006852_2020_Generic.zip), file should be put into "files" directory
 TIME_ZONE=UTC # Timezone of your favorite Location (Europe/Berlin, UTC, US/Eastern, ...) --> Only Linux zoneinfo supported
 ```
 

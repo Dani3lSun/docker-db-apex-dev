@@ -10,8 +10,8 @@ This Docker Image contains the following:
 * Oracle Linux 7.9
 * Oracle Database 12.2 / 18.3 / 19.3 Enterprise Edition with non-CDB architecture
 * Oracle APEX 20.2
-* Oracle ORDS 20.2.1
-* Oracle SQLcl 20.2
+* Oracle ORDS 20.3
+* Oracle SQLcl 20.3
 * Apache Tomcat 8.5.59
 * AdoptOpenJDK 11.0.9+11
 * OraOpenSource Logger 3.1.1
@@ -43,8 +43,8 @@ You can take the direct Download Links from [download_urls.txt](https://github.c
 * [Oracle Database 18.3 EE](https://download.oracle.com/otn/linux/oracle18c/180000/LINUX.X64_180000_db_home.zip)
 * [Oracle Database 19.3 EE](https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.zip)
 * [Oracle APEX 20.2](https://download.oracle.com/otn/java/appexpress/apex_20.2.zip)
-* [Oracle ORDS 20.2.1](https://download.oracle.com/otn/java/ords/ords-20.2.1.227.0350.zip)
-* [Oracle SQLcl 20.2](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-20.2.0.174.1557.zip)
+* [Oracle ORDS 20.3](https://download.oracle.com/otn/java/ords/ords-20.3.0.301.1819.zip)
+* [Oracle SQLcl 20.3](https://download.oracle.com/otn/java/sqldeveloper/sqlcl-20.3.0.274.1916.zip)
 * [Apache Tomcat 8.5.59](https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.tar.gz)
 * [AdoptOpenJDK 11.0.9+11 - Linux x64 tar.gz](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.9%2B11.1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.9_11.tar.gz)
 * [OraOpenSource Logger 3.1.1](https://github.com/OraOpenSource/Logger/raw/master/releases/logger_3.1.1.zip)

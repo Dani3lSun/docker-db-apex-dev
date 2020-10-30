@@ -17,10 +17,10 @@ https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.
 https://download.oracle.com/otn/java/appexpress/apex_20.2.zip
 
 # Oracle ORDS
-https://download.oracle.com/otn/java/ords/ords-20.2.1.227.0350.zip
+https://download.oracle.com/otn/java/ords/ords-20.3.0.301.1819.zip
 
 # Oracle SQLcl
-https://download.oracle.com/otn/java/sqldeveloper/sqlcl-20.2.0.174.1557.zip
+https://download.oracle.com/otn/java/sqldeveloper/sqlcl-20.3.0.274.1916.zip
 
 # Swagger-UI
 https://github.com/swagger-api/swagger-ui/archive/v3.35.2.zip

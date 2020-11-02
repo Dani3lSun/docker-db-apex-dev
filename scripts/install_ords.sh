@@ -47,19 +47,19 @@ java -jar ords.war configdir $CURR_DIR
 java -jar ords.war install simple
 
 # tune some ORDS default settings
-sed -i -E '/<\/properties>/d' defaults.xml
-echo '<entry key="jdbc.InitialLimit">6</entry>' >>defaults.xml
-echo '<entry key="jdbc.MaxConnectionReuseCount">10000</entry>' >>defaults.xml
-echo '<entry key="jdbc.MaxLimit">40</entry>' >>defaults.xml
-echo '<entry key="jdbc.MinLimit">6</entry>' >>defaults.xml
+java -jar ords.war set-property jdbc.InitialLimit 6
+java -jar ords.war set-property jdbc.MinLimit 6
+java -jar ords.war set-property jdbc.MaxLimit 40
+java -jar ords.war set-property jdbc.MaxConnectionReuseCount 10000
+
 # sqldev web: ords >= 19.4
 if [ ${INSTALL_SQLDEVWEB} == "true" ]; then
-    echo '<entry key="feature.sdw">true</entry>' >>defaults.xml
-    echo '<entry key="restEnabledSql.active">true</entry>' >>defaults.xml
-    echo '<entry key="database.api.enabled">true</entry>' >>defaults.xml
-    echo '<entry key="security.verifySSL">false</entry>' >>defaults.xml
+    java -jar ords.war set-property feature.sdw true
+    java -jar ords.war set-property restEnabledSql.active true
+    java -jar ords.war set-property database.api.enabled true
+    java -jar ords.war set-property security.verifySSL false
 fi
-echo '</properties>' >>defaults.xml
+
 chmod 777 defaults.xml
 
 # copy files
